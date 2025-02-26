@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="marionette"
+config/name="Strings Attached"
 run/main_scene="res://scenes/ShowManager.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
