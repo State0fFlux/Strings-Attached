@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdg8ui6n1f152"]
+
+[ext_resource type="Texture2D" uid="uid://twix4fsisrpk" path="res://art/stage.jpeg" id="1_hncr4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrfi"]
+size = Vector2(3629, 62)
+
+[node name="ActI" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(880, 1056)
+shape = SubResource("RectangleShape2D_fhrfi")
+
+[node name="Stage" type="Sprite2D" parent="."]
+position = Vector2(880, 392)
+scale = Vector2(4.7268, 2.63883)
+texture = ExtResource("1_hncr4")
