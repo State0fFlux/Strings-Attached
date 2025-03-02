@@ -1,17 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdg8ui6n1f152"]
+[gd_scene load_steps=7 format=3 uid="uid://bdg8ui6n1f152"]
 
 [ext_resource type="Texture2D" uid="uid://twix4fsisrpk" path="res://art/stage.jpeg" id="1_hncr4"]
 [ext_resource type="Texture2D" uid="uid://cywuhagbdnwy6" path="res://textures/spotlight.png" id="2_kre1a"]
+[ext_resource type="Texture2D" uid="uid://mb6r3ssw24vj" path="res://icon.svg" id="3_67bmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrfi"]
 size = Vector2(3629, 62)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h8eu"]
+size = Vector2(384, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylb0i"]
+size = Vector2(128, 21.3333)
+
 [node name="ActI" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(880, 1056)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("RectangleShape2D_fhrfi")
 
 [node name="Stage" type="Sprite2D" parent="."]
@@ -66,3 +73,47 @@ position = Vector2(2340, -70)
 scale = Vector2(0.635498, 1.05711)
 texture = ExtResource("2_kre1a")
 offset = Vector2(0, 500)
+
+[node name="Prop1" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Prop1"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_1h8eu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Prop1"]
+position = Vector2(0, -24)
+scale = Vector2(3, 0.375)
+texture = ExtResource("3_67bmd")
+
+[node name="DampedSpringJoint2D2" type="DampedSpringJoint2D" parent="."]
+position = Vector2(128, 0)
+node_a = NodePath("../Cloud")
+node_b = NodePath("../Prop1")
+bias = 0.25
+length = 900.0
+rest_length = 896.0
+stiffness = 1.0
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+position = Vector2(-128, 0)
+node_a = NodePath("../Cloud")
+node_b = NodePath("../Prop1")
+bias = 0.25
+length = 900.0
+rest_length = 896.0
+stiffness = 1.0
+
+[node name="Cloud" type="RigidBody2D" parent="."]
+position = Vector2(0, 928)
+mass = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="Cloud"]
+position = Vector2(0, -2.24113e-05)
+scale = Vector2(3, 0.5)
+texture = ExtResource("3_67bmd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud"]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_ylb0i")
+metadata/_edit_lock_ = true

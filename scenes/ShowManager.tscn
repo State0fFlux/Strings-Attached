@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://djwvxfs65uec0"]
+[gd_scene load_steps=5 format=3 uid="uid://djwvxfs65uec0"]
 
 [ext_resource type="Script" path="res://scripts/show_manager.gd" id="1_6xpgr"]
 [ext_resource type="PackedScene" uid="uid://bkjelfox3kky" path="res://scenes/ControlRoom.tscn" id="2_0ahbu"]
-[ext_resource type="Texture2D" uid="uid://dux0mg1u8w2iw" path="res://art/audience.png" id="4_gwf5f"]
 [ext_resource type="PackedScene" uid="uid://bdg8ui6n1f152" path="res://scenes/ActI.tscn" id="4_w3lo0"]
 [ext_resource type="PackedScene" uid="uid://cribdiwcjbq2y" path="res://character/marionette.tscn" id="5_vq0uw"]
 
@@ -10,15 +9,10 @@
 script = ExtResource("1_6xpgr")
 
 [node name="ActI" parent="." instance=ExtResource("4_w3lo0")]
-position = Vector2(496, 192)
+position = Vector2(-440, 192)
 scale = Vector2(0.5, 0.5)
 
 [node name="ControlRoom" parent="." instance=ExtResource("2_0ahbu")]
 
-[node name="Audience" type="Sprite2D" parent="ControlRoom"]
-position = Vector2(960, 888)
-scale = Vector2(1.28331, 0.742857)
-texture = ExtResource("4_gwf5f")
-
 [node name="Player" parent="." instance=ExtResource("5_vq0uw")]
-position = Vector2(960, 664)
+position = Vector2(-168, 664)

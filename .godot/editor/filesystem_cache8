@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740901922
+::res://::1740938022
 icon.svg::CompressedTexture2D::846244585991207999::1740418914::1740558883::1::::<><>::
 ::res://art/::1740558884
 audience.png::CompressedTexture2D::8612059322788065490::1740556516::1740558883::1::::<><>::
@@ -12,12 +12,12 @@ marionette.gd::GDScript::-1::1740853702::0::1::::<>CharacterBody2D<>::
 marionette.tscn::PackedScene::5982633259915166918::1740558803::0::1::::<><>::uid://d03ba6pw20weu::::res://art/placeholder.png<>res://character/marionette.gd
 ::res://globals/::1740853243
 utils.gd::GDScript::-1::1740853243::0::1::::<>RefCounted<>::
-::res://scenes/::1740853704
-ActI.tscn::PackedScene::2611413326472319015::1740853704::0::1::::<><>::uid://twix4fsisrpk::::res://art/stage.jpeg<>uid://cywuhagbdnwy6::::res://textures/spotlight.png
-ControlRoom.tscn::PackedScene::91386803437965668::1740558812::0::1::::<><>::res://scripts/ControlRoom.gd
-ShowManager.tscn::PackedScene::7837694376391427277::1740853704::0::1::::<><>::res://scripts/show_manager.gd<>uid://bkjelfox3kky::::res://scenes/ControlRoom.tscn<>uid://dux0mg1u8w2iw::::res://art/audience.png<>uid://bdg8ui6n1f152::::res://scenes/ActI.tscn<>uid://cribdiwcjbq2y::::res://character/marionette.tscn
-::res://scripts/::1740853702
-ControlRoom.gd::GDScript::-1::1740550957::0::1::::<>Node2D<>::
+::res://scenes/::1740905958
+ActI.tscn::PackedScene::2611413326472319015::1740905934::0::1::::<><>::uid://twix4fsisrpk::::res://art/stage.jpeg<>uid://cywuhagbdnwy6::::res://textures/spotlight.png
+ControlRoom.tscn::PackedScene::91386803437965668::1740905934::0::1::::<><>::res://scripts/ControlRoom.gd
+ShowManager.tscn::PackedScene::7837694376391427277::1740905958::0::1::::<><>::res://scripts/show_manager.gd<>uid://bkjelfox3kky::::res://scenes/ControlRoom.tscn<>uid://dux0mg1u8w2iw::::res://art/audience.png<>uid://bdg8ui6n1f152::::res://scenes/ActI.tscn<>uid://cribdiwcjbq2y::::res://character/marionette.tscn
+::res://scripts/::1740905958
+ControlRoom.gd::GDScript::-1::1740905958::0::1::::<>Node2D<>::
 show_manager.gd::GDScript::-1::1740853702::0::1::::<>Node2D<>::
 ::res://textures/::1740598926
 radial_light.tres::GradientTexture2D::4528471009082562899::1740597897::0::1::::<><>::

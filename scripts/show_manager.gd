@@ -18,7 +18,7 @@ func _ready() -> void:
 #debug
 func _process(delta: float) -> void:
 	if get_viewport().get_camera_2d() == player_cam:
-		control_room.global_position = player_cam.global_position + Vector2(-1920/2, -1080/2)
+		control_room.global_position = player_cam.global_position
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ZoomOut") and not is_zoomed_out and not room_is_locked and player.is_on_floor():
@@ -52,7 +52,7 @@ func switch_camera(target_camera: Camera2D):
 
 	# adjust the control_room to the player
 	if target_camera == player_cam:
-		tween.tween_property(control_room, "position", player_cam.global_position + Vector2(-1920/2, -1080/2), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(control_room, "position", player_cam.global_position, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 		
 	await tween.finished  # Wait for tween completion
 
