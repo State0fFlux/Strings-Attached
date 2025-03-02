@@ -1,0 +1,4 @@
+res://scenes/ShowManager.tscn
+res://scenes/ActI.tscn
+res://scenes/ControlRoom.tscn
+res://scripts/ControlRoom.gd

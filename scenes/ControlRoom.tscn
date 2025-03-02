@@ -46,68 +46,76 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(4, 4)
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button1" type="Button" parent="Control" groups=["Buttons"]]
 layout_mode = 0
 offset_left = 25.25
 offset_top = 26.0
 offset_right = 43.25
 offset_bottom = 57.0
+focus_mode = 0
 text = "1"
 
-[node name="Button2" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 26.25
-offset_top = 67.0
-offset_right = 44.25
-offset_bottom = 98.0
-text = "2"
-
-[node name="Button3" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 26.25
-offset_top = 112.0
-offset_right = 44.25
-offset_bottom = 143.0
-text = "3"
-
-[node name="Button4" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 26.25
-offset_top = 160.0
-offset_right = 44.25
-offset_bottom = 191.0
-text = "4"
-
-[node name="Button5" type="Button" parent="Control"]
+[node name="Button2" type="Button" parent="Control" groups=["Buttons"]]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 25.5
 offset_right = 89.0
 offset_bottom = 56.5
-text = "5"
+focus_mode = 0
+text = "2"
 
-[node name="Button6" type="Button" parent="Control"]
+[node name="Button3" type="Button" parent="Control" groups=["Buttons"]]
+layout_mode = 0
+offset_left = 26.25
+offset_top = 67.0
+offset_right = 44.25
+offset_bottom = 98.0
+focus_mode = 0
+text = "3"
+
+[node name="Button4" type="Button" parent="Control" groups=["Buttons"]]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 66.5
 offset_right = 90.0
 offset_bottom = 97.5
-text = "6"
+focus_mode = 0
+text = "4"
 
-[node name="Button7" type="Button" parent="Control"]
+[node name="Button5" type="Button" parent="Control" groups=["Buttons"]]
+layout_mode = 0
+offset_left = 26.25
+offset_top = 112.0
+offset_right = 44.25
+offset_bottom = 143.0
+focus_mode = 0
+text = "5"
+
+[node name="Button6" type="Button" parent="Control" groups=["Buttons"]]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 111.5
 offset_right = 90.0
 offset_bottom = 142.5
+focus_mode = 0
+text = "6"
+
+[node name="Button7" type="Button" parent="Control" groups=["Buttons"]]
+layout_mode = 0
+offset_left = 26.25
+offset_top = 160.0
+offset_right = 44.25
+offset_bottom = 191.0
+focus_mode = 0
 text = "7"
 
-[node name="Button8" type="Button" parent="Control"]
+[node name="Button8" type="Button" parent="Control" groups=["Buttons"]]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 159.5
 offset_right = 90.0
 offset_bottom = 190.5
+focus_mode = 0
 text = "8"
 
 [node name="Screen" type="ColorRect" parent="."]

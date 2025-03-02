@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdg8ui6n1f152"]
+[gd_scene load_steps=4 format=3 uid="uid://bdg8ui6n1f152"]
 
 [ext_resource type="Texture2D" uid="uid://twix4fsisrpk" path="res://art/stage.jpeg" id="1_hncr4"]
+[ext_resource type="Texture2D" uid="uid://cywuhagbdnwy6" path="res://textures/spotlight.png" id="2_kre1a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrfi"]
 size = Vector2(3629, 62)
@@ -17,3 +18,51 @@ shape = SubResource("RectangleShape2D_fhrfi")
 position = Vector2(880, 392)
 scale = Vector2(4.7268, 2.63883)
 texture = ExtResource("1_hncr4")
+
+[node name="Light1" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(-180, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light2" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(180, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light3" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(540, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light4" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(900, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light5" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(1260, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light6" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(1620, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light7" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(1980, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
+
+[node name="Light8" type="PointLight2D" parent="." groups=["Lights"]]
+position = Vector2(2340, -70)
+scale = Vector2(0.635498, 1.05711)
+texture = ExtResource("2_kre1a")
+offset = Vector2(0, 500)
