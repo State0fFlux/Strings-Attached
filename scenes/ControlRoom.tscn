@@ -20,6 +20,7 @@ position = Vector2(-952, 17)
 shape = SubResource("RectangleShape2D_gk6r0")
 
 [node name="Right" type="ColorRect" parent="."]
+light_mask = 0
 offset_left = 992.0
 offset_top = -1080.0
 offset_right = 1456.0
@@ -27,6 +28,7 @@ scale = Vector2(2, 2)
 color = Color(0.450648, 0.450648, 0.450648, 1)
 
 [node name="Top" type="ColorRect" parent="."]
+light_mask = 0
 offset_left = -992.0
 offset_top = -1080.0
 offset_bottom = -892.0
@@ -34,6 +36,7 @@ scale = Vector2(2, 2)
 color = Color(0.450648, 0.450648, 0.450648, 1)
 
 [node name="Left" type="ColorRect" parent="."]
+light_mask = 0
 offset_left = -1920.0
 offset_top = -1080.0
 offset_right = -1456.0
@@ -41,6 +44,7 @@ scale = Vector2(2, 2)
 color = Color(0.450648, 0.450648, 0.450648, 1)
 
 [node name="Bottom" type="ColorRect" parent="."]
+light_mask = 0
 offset_left = -992.0
 offset_top = 736.0
 offset_bottom = 908.0

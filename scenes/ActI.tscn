@@ -117,3 +117,10 @@ metadata/_edit_lock_ = true
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_ylb0i")
 metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1736.0
+offset_top = -408.0
+offset_right = 3392.0
+offset_bottom = 1248.0
+color = Color(0, 0, 0, 0.588235)
