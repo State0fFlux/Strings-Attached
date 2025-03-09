@@ -1,7 +1,5 @@
 res://scenes/ShowManager.tscn
-res://scripts/ControlRoom.gd
 res://scenes/ActI.tscn
 res://scenes/ControlRoom.tscn
 res://character/marionette.tscn
 res://character/mar_v2.tscn
-res://character/mar_v_2.gd

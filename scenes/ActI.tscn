@@ -119,6 +119,7 @@ shape = SubResource("RectangleShape2D_ylb0i")
 metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -1736.0
 offset_top = -408.0
 offset_right = 3392.0

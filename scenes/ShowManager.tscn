@@ -19,6 +19,6 @@ position = Vector2(-168, 664)
 [node name="ControlRoom" parent="." instance=ExtResource("2_0ahbu")]
 z_index = 1
 
-[node name="Alt" parent="." instance=ExtResource("5_ttulr")]
+[node name="Player2" parent="." instance=ExtResource("5_ttulr")]
+visible = false
 position = Vector2(206, 473)
-scale = Vector2(0.051, 0.051)

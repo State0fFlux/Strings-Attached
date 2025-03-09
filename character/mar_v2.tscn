@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://boxdh81mmg361" path="res://art/limbs.png" id="3_s0v7q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmpu7"]
-radius = 288.0
-height = 2002.0
+radius = 28.0
+height = 154.0
 
 [sub_resource type="SkeletonModification2DPhysicalBones" id="SkeletonModification2DPhysicalBones_q44jx"]
 execution_mode = 1
@@ -27,9 +27,11 @@ modifications/0 = SubResource("SkeletonModification2DPhysicalBones_q44jx")
 script = ExtResource("1_xyksl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -26)
 shape = SubResource("CapsuleShape2D_bmpu7")
 
 [node name="Body" type="Node2D" parent="."]
+scale = Vector2(0.05, 0.05)
 
 [node name="Head" type="Sprite2D" parent="Body"]
 light_mask = 0
@@ -152,6 +154,7 @@ vframes = 4
 frame = 5
 
 [node name="Bones" type="Skeleton2D" parent="."]
+scale = Vector2(0.05, 0.05)
 modification_stack = SubResource("SkeletonModificationStack2D_kwxe5")
 
 [node name="Hip" type="Bone2D" parent="Bones"]
@@ -302,3 +305,6 @@ simulate_physics = true
 [node name="HandL Target" type="Node2D" parent="IK Targets"]
 
 [node name="HandR Target" type="Node2D" parent="IK Targets"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -192)
