@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://obfcgnig23ne"
-path="res://.godot/imported/rThigh.png-53823e81d2ee14d3d16da4be02dc0fe6.ctex"
+uid="uid://d06bxfuakrb4x"
+path="res://.godot/imported/rShin.png-c1b805152eb38282572091dd83a938cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/clockwork/parts/rThigh.png"
-dest_files=["res://.godot/imported/rThigh.png-53823e81d2ee14d3d16da4be02dc0fe6.ctex"]
+source_file="res://art/clockwork/front/rShin.png"
+dest_files=["res://.godot/imported/rShin.png-c1b805152eb38282572091dd83a938cf.ctex"]
 
 [params]
 

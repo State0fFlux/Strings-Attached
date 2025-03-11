@@ -1,6 +1,7 @@
+AnimationPlayer
+Node2D
 RemoteTransform2D
 Bone2D
-Node2D
 Sprite2D
 CollisionShape2D
 CharacterBody2D

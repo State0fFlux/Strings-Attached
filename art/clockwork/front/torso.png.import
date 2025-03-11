@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnul7flp6o5ha"
-path="res://.godot/imported/torso.png-02b2e7bae431024dc4cad6f5421763f8.ctex"
+path="res://.godot/imported/torso.png-6a551ab7bd8357961637433d4976ab9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/clockwork/parts/torso.png"
-dest_files=["res://.godot/imported/torso.png-02b2e7bae431024dc4cad6f5421763f8.ctex"]
+source_file="res://art/clockwork/front/torso.png"
+dest_files=["res://.godot/imported/torso.png-6a551ab7bd8357961637433d4976ab9d.ctex"]
 
 [params]
 

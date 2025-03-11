@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crtpagt3fn506"
-path="res://.godot/imported/lHand.png-1b0aaf7c89a73382f8eb44594bbd7488.ctex"
+path="res://.godot/imported/lHand.png-3624cd66904fb3a3e20fadae6a2126e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/clockwork/parts/lHand.png"
-dest_files=["res://.godot/imported/lHand.png-1b0aaf7c89a73382f8eb44594bbd7488.ctex"]
+source_file="res://art/clockwork/front/lHand.png"
+dest_files=["res://.godot/imported/lHand.png-3624cd66904fb3a3e20fadae6a2126e2.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d06bxfuakrb4x"
-path="res://.godot/imported/rShin.png-d2f4ace1d6772c7df45e33e76c1e38c9.ctex"
+uid="uid://dw0j4xbobqs8v"
+path="res://.godot/imported/rHand.png-fc4257d24e84c1967a69fc857903f9c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/clockwork/parts/rShin.png"
-dest_files=["res://.godot/imported/rShin.png-d2f4ace1d6772c7df45e33e76c1e38c9.ctex"]
+source_file="res://art/clockwork/front/rHand.png"
+dest_files=["res://.godot/imported/rHand.png-fc4257d24e84c1967a69fc857903f9c2.ctex"]
 
 [params]
 
