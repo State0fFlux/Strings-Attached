@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5g44i3u5bve"
-path="res://.godot/imported/marionette.png-fd322aee1e5a12cb0fd30e4ac5d1abbe.ctex"
+uid="uid://vjh65onieu0a"
+path="res://.godot/imported/Clockwork.png-25fa3734e7e3ae700c5becf2d496d644.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/marionette.png"
-dest_files=["res://.godot/imported/marionette.png-fd322aee1e5a12cb0fd30e4ac5d1abbe.ctex"]
+source_file="res://art/Clockwork.png"
+dest_files=["res://.godot/imported/Clockwork.png-25fa3734e7e3ae700c5becf2d496d644.ctex"]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbcf4rivvir0h"]
+
+[ext_resource type="Script" uid="uid://b0tq8mep73oyi" path="res://character/mar_v_2.gd" id="1_5jucb"]
+[ext_resource type="Texture2D" uid="uid://vjh65onieu0a" path="res://art/Clockwork.png" id="1_r0iqg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jucb"]
+radius = 163.0
+height = 1084.0
+
+[node name="Clockwork" type="CharacterBody2D"]
+script = ExtResource("1_5jucb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1.5, -23)
+limit_bottom = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5jucb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r0iqg")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://da7yyk1vv8c6t"]
 
 [ext_resource type="Texture2D" uid="uid://mb6r3ssw24vj" path="res://icon.svg" id="1_spkpb"]
-[ext_resource type="PackedScene" uid="uid://b6n7wb35i7vkf" path="res://character/mar_v2.tscn" id="2_668hk"]
+[ext_resource type="PackedScene" uid="uid://dbcf4rivvir0h" path="res://character/Clockwork.tscn" id="3_3rtus"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dir3c"]
 texture = ExtResource("1_spkpb")
@@ -239,5 +239,6 @@ tile_set = SubResource("TileSet_8lvg8")
 tile_map_data = PackedByteArray("AAABAP//AAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAOAP//AAAAAAAAAAAOAP7/AAAAAAAAAAAPAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_o1n4n")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_668hk")]
-position = Vector2(488, -96)
+[node name="Clockwork" parent="." instance=ExtResource("3_3rtus")]
+position = Vector2(462, -138)
+scale = Vector2(0.25, 0.25)

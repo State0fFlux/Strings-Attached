@@ -23,7 +23,7 @@ enabled = true
 modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DPhysicalBones_q44jx")
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="old_marionette" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_xyksl")
 
@@ -168,6 +168,7 @@ vframes = 4
 frame = 5
 
 [node name="Bones" type="Skeleton2D" parent="."]
+visible = false
 scale = Vector2(0.05, 0.05)
 modification_stack = SubResource("SkeletonModificationStack2D_kwxe5")
 
