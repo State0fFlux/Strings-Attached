@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://boxdh81mmg361" path="res://art/limbs.png" id="3_s0v7q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmpu7"]
-radius = 28.0
-height = 154.0
+radius = 14.5
+height = 112.0
 
 [sub_resource type="SkeletonModification2DPhysicalBones" id="SkeletonModification2DPhysicalBones_q44jx"]
 execution_mode = 1
@@ -24,10 +24,11 @@ modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DPhysicalBones_q44jx")
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_xyksl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -26)
+position = Vector2(0.5, -9)
 shape = SubResource("CapsuleShape2D_bmpu7")
 
 [node name="Body" type="Node2D" parent="."]
@@ -36,6 +37,7 @@ scale = Vector2(0.05, 0.05)
 [node name="Head" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-32, -592)
+scale = Vector2(1, 1)
 texture = ExtResource("1_utkye")
 offset = Vector2(-56, -368)
 
@@ -49,6 +51,7 @@ vframes = 2
 [node name="Lthigh" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-88, 24)
+scale = Vector2(1, 1)
 texture = ExtResource("2_5hlae")
 offset = Vector2(8, 152)
 hframes = 2
@@ -58,6 +61,7 @@ frame = 2
 [node name="Rthigh" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(88, 24)
+scale = Vector2(1, 1)
 texture = ExtResource("2_5hlae")
 offset = Vector2(-8, 168)
 hframes = 2
@@ -67,6 +71,7 @@ frame = 3
 [node name="Lcalf" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-72, 392)
+scale = Vector2(1, 1)
 texture = ExtResource("2_5hlae")
 offset = Vector2(-24, 168)
 hframes = 2
@@ -76,6 +81,7 @@ frame = 1
 [node name="Rcalf" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(88, 392)
+scale = Vector2(1, 1)
 texture = ExtResource("2_5hlae")
 offset = Vector2(-24, 168)
 hframes = 2
@@ -85,6 +91,7 @@ frame = 1
 [node name="Lfoot" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-72, 760)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(8, 80)
 hframes = 2
@@ -94,6 +101,7 @@ frame = 6
 [node name="Rfoot" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(88, 760)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(-8, 88)
 hframes = 2
@@ -103,6 +111,7 @@ frame = 7
 [node name="Larm" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-232, -464)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(0, 112)
 hframes = 2
@@ -111,6 +120,7 @@ vframes = 4
 [node name="Lfore" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-232, -216)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(0, 88)
 hframes = 2
@@ -120,6 +130,7 @@ frame = 2
 [node name="Lhand" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(-232, -32)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(0, 88)
 hframes = 2
@@ -129,6 +140,7 @@ frame = 4
 [node name="Rarm" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(200, -472)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(0, 112)
 hframes = 2
@@ -138,6 +150,7 @@ frame = 1
 [node name="Rfore" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(208, -224)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(0, 88)
 hframes = 2
@@ -147,6 +160,7 @@ frame = 3
 [node name="Rhand" type="Sprite2D" parent="Body"]
 light_mask = 0
 position = Vector2(224, -40)
+scale = Vector2(1, 1)
 texture = ExtResource("3_s0v7q")
 offset = Vector2(-8, 80)
 hframes = 2
@@ -307,4 +321,5 @@ simulate_physics = true
 [node name="HandR Target" type="Node2D" parent="IK Targets"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -192)
+position = Vector2(-1.5, -23)
+limit_bottom = 128

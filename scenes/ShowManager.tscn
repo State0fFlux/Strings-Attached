@@ -1,24 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://djwvxfs65uec0"]
+[gd_scene load_steps=3 format=3 uid="uid://djwvxfs65uec0"]
 
-[ext_resource type="Script" path="res://scripts/show_manager.gd" id="1_6xpgr"]
-[ext_resource type="PackedScene" uid="uid://bkjelfox3kky" path="res://scenes/ControlRoom.tscn" id="2_0ahbu"]
 [ext_resource type="PackedScene" uid="uid://bdg8ui6n1f152" path="res://scenes/ActI.tscn" id="4_w3lo0"]
-[ext_resource type="PackedScene" uid="uid://b6n7wb35i7vkf" path="res://character/mar_v2.tscn" id="5_ttulr"]
-[ext_resource type="PackedScene" uid="uid://cribdiwcjbq2y" path="res://character/marionette.tscn" id="5_vq0uw"]
+[ext_resource type="PackedScene" uid="uid://da7yyk1vv8c6t" path="res://scenes/Act0.tscn" id="5_bq6d0"]
 
 [node name="ShowManager" type="Node2D"]
-script = ExtResource("1_6xpgr")
 
 [node name="ActI" parent="." instance=ExtResource("4_w3lo0")]
+visible = false
 position = Vector2(-440, 192)
 scale = Vector2(0.5, 0.5)
 
-[node name="Player" parent="." instance=ExtResource("5_vq0uw")]
-position = Vector2(-168, 664)
-
-[node name="ControlRoom" parent="." instance=ExtResource("2_0ahbu")]
-z_index = 1
-
-[node name="Player2" parent="." instance=ExtResource("5_ttulr")]
-visible = false
-position = Vector2(206, 473)
+[node name="Act0" parent="." instance=ExtResource("5_bq6d0")]

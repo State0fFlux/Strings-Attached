@@ -1,6 +1,7 @@
+Node2D
+TileMapLayer
 ColorRect
 PhysicalBone2D
-Node2D
 RemoteTransform2D
 Bone2D
 Skeleton2D
@@ -11,4 +12,3 @@ StaticBody2D
 DampedSpringJoint2D
 NinePatchRect
 RigidBody2D
-Polygon2D
