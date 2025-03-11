@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cribdiwcjbq2y"]
 
 [ext_resource type="Texture2D" uid="uid://d03ba6pw20weu" path="res://art/placeholder.png" id="2_ke0sn"]
-[ext_resource type="Script" path="res://character/marionette.gd" id="2_nsey8"]
+[ext_resource type="Script" uid="uid://6igsiliqtcye" path="res://character/marionette.gd" id="2_nsey8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l5bmg"]
 radius = 21.0
@@ -95,11 +95,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wsg8n"]
 _data = {
-"Fall": SubResource("Animation_7sa25"),
-"Idle": SubResource("Animation_ukbxc"),
-"Jump": SubResource("Animation_2lvlu"),
-"RESET": SubResource("Animation_i1y1j"),
-"Walk": SubResource("Animation_nhhjv")
+&"Fall": SubResource("Animation_7sa25"),
+&"Idle": SubResource("Animation_ukbxc"),
+&"Jump": SubResource("Animation_2lvlu"),
+&"RESET": SubResource("Animation_i1y1j"),
+&"Walk": SubResource("Animation_nhhjv")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -117,7 +117,7 @@ shape = SubResource("CapsuleShape2D_l5bmg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_wsg8n")
+&"": SubResource("AnimationLibrary_wsg8n")
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
