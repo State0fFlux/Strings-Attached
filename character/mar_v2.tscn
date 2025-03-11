@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6n7wb35i7vkf"]
 
-[ext_resource type="Texture2D" uid="uid://bqhh1bfj6bx1u" path="res://art/head.png" id="1_utkye"]
+[ext_resource type="Texture2D" uid="uid://bqhh1bfj6bx1u" path="res://art/scrapped/head.png" id="1_utkye"]
 [ext_resource type="Script" uid="uid://b0tq8mep73oyi" path="res://character/mar_v_2.gd" id="1_xyksl"]
-[ext_resource type="Texture2D" uid="uid://de6ubq2yfrqkf" path="res://art/body.png" id="2_5hlae"]
-[ext_resource type="Texture2D" uid="uid://boxdh81mmg361" path="res://art/limbs.png" id="3_s0v7q"]
+[ext_resource type="Texture2D" uid="uid://de6ubq2yfrqkf" path="res://art/scrapped/body.png" id="2_5hlae"]
+[ext_resource type="Texture2D" uid="uid://boxdh81mmg361" path="res://art/scrapped/limbs.png" id="3_s0v7q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmpu7"]
 radius = 14.5
@@ -168,7 +168,6 @@ vframes = 4
 frame = 5
 
 [node name="Bones" type="Skeleton2D" parent="."]
-visible = false
 scale = Vector2(0.05, 0.05)
 modification_stack = SubResource("SkeletonModificationStack2D_kwxe5")
 

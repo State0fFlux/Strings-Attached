@@ -1,12 +1,12 @@
+RemoteTransform2D
+Bone2D
+Node2D
 Sprite2D
 CollisionShape2D
 CharacterBody2D
-Node2D
 TileMapLayer
 ColorRect
 PhysicalBone2D
-RemoteTransform2D
-Bone2D
 Skeleton2D
 StaticBody2D
 DampedSpringJoint2D

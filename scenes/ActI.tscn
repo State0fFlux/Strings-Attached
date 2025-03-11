@@ -7,7 +7,6 @@
 size = Vector2(3629, 62)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_77ij5"]
-load_path = "res://.godot/imported/stage.jpeg-12dbc12cd1fdca73e86c8393e19e0d00.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h8eu"]
 size = Vector2(384, 48)

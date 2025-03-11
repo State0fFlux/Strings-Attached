@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de6ubq2yfrqkf"
-path="res://.godot/imported/body.png-74af02edc32a087e3c0d6ae484ace257.ctex"
+uid="uid://dq7h0nga2tj11"
+path="res://.godot/imported/lThigh.png-b166babe7f06452cf9ba1816cb0c475f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/body.png"
-dest_files=["res://.godot/imported/body.png-74af02edc32a087e3c0d6ae484ace257.ctex"]
+source_file="res://art/clockwork/parts/lThigh.png"
+dest_files=["res://.godot/imported/lThigh.png-b166babe7f06452cf9ba1816cb0c475f.ctex"]
 
 [params]
 

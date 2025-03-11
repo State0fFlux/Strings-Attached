@@ -1,11 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbcf4rivvir0h"]
+[gd_scene load_steps=17 format=3 uid="uid://dbcf4rivvir0h"]
 
 [ext_resource type="Script" uid="uid://b0tq8mep73oyi" path="res://character/mar_v_2.gd" id="1_5jucb"]
-[ext_resource type="Texture2D" uid="uid://vjh65onieu0a" path="res://art/Clockwork.png" id="1_r0iqg"]
+[ext_resource type="Texture2D" uid="uid://cnul7flp6o5ha" path="res://art/clockwork/parts/torso.png" id="3_ropgy"]
+[ext_resource type="Texture2D" uid="uid://bdta5dyq2o7wt" path="res://art/clockwork/parts/head.png" id="4_8t3fi"]
+[ext_resource type="Texture2D" uid="uid://crtpagt3fn506" path="res://art/clockwork/parts/lHand.png" id="5_8q1fb"]
+[ext_resource type="Texture2D" uid="uid://bul8kjpa7g5jd" path="res://art/clockwork/parts/lForearm.png" id="6_ewfl5"]
+[ext_resource type="Texture2D" uid="uid://bnulr73yqa4gk" path="res://art/clockwork/parts/lShoulder.png" id="7_o3i88"]
+[ext_resource type="Texture2D" uid="uid://dw0j4xbobqs8v" path="res://art/clockwork/parts/rHand.png" id="8_ym88w"]
+[ext_resource type="Texture2D" uid="uid://6arit7t34w60" path="res://art/clockwork/parts/rForearm.png" id="9_p0vnl"]
+[ext_resource type="Texture2D" uid="uid://y74n1ydtn00u" path="res://art/clockwork/parts/rShoulder.png" id="10_4pjga"]
+[ext_resource type="Texture2D" uid="uid://2gym00ysaqhl" path="res://art/clockwork/parts/lShin.png" id="11_bc03q"]
+[ext_resource type="Texture2D" uid="uid://d06bxfuakrb4x" path="res://art/clockwork/parts/rShin.png" id="12_b48ef"]
+[ext_resource type="Texture2D" uid="uid://dq7h0nga2tj11" path="res://art/clockwork/parts/lThigh.png" id="13_gbeyn"]
+[ext_resource type="Texture2D" uid="uid://obfcgnig23ne" path="res://art/clockwork/parts/rThigh.png" id="14_a54qd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jucb"]
 radius = 163.0
 height = 1084.0
+
+[sub_resource type="SkeletonModification2DPhysicalBones" id="SkeletonModification2DPhysicalBones_4yfbs"]
+execution_mode = 1
+physical_bone_chain_length = 4
+fetch_bones = null
+joint_0_nodepath = NodePath("")
+joint_1_nodepath = NodePath("")
+joint_2_nodepath = NodePath("")
+joint_3_nodepath = NodePath("")
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_ropgy"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DPhysicalBones_4yfbs")
 
 [node name="Clockwork" type="CharacterBody2D"]
 script = ExtResource("1_5jucb")
@@ -17,5 +42,191 @@ limit_bottom = 128
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_5jucb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_r0iqg")
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Torso" type="Sprite2D" parent="Body"]
+position = Vector2(0, 161)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("3_ropgy")
+offset = Vector2(-1, -161)
+
+[node name="Head" type="Sprite2D" parent="Body"]
+position = Vector2(0, -320.999)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("4_8t3fi")
+
+[node name="LHand" type="Sprite2D" parent="Body"]
+position = Vector2(-157, 209)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("5_8q1fb")
+offset = Vector2(6, 56)
+
+[node name="LForearm" type="Sprite2D" parent="Body"]
+position = Vector2(-142, 48.0003)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("6_ewfl5")
+offset = Vector2(-14, 81)
+
+[node name="LShoulder" type="Sprite2D" parent="Body"]
+position = Vector2(-97.9998, -62.9995)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("7_o3i88")
+offset = Vector2(-20, 39)
+
+[node name="RHand" type="Sprite2D" parent="Body"]
+position = Vector2(157, 208)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("8_ym88w")
+offset = Vector2(-6, 56)
+
+[node name="RForearm" type="Sprite2D" parent="Body"]
+position = Vector2(142, 48.0003)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("9_p0vnl")
+offset = Vector2(14, 81)
+
+[node name="RShoulder" type="Sprite2D" parent="Body"]
+position = Vector2(98.9998, -62.9995)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("10_4pjga")
+offset = Vector2(18, 39)
+
+[node name="LShin" type="Sprite2D" parent="Body"]
+position = Vector2(-56.9999, 349)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("11_bc03q")
+offset = Vector2(5, 81)
+
+[node name="RShin" type="Sprite2D" parent="Body"]
+position = Vector2(56.9999, 349)
+scale = Vector2(0.999999, 0.999999)
+texture = ExtResource("12_b48ef")
+offset = Vector2(-5, 81)
+
+[node name="LThigh" type="Sprite2D" parent="Body"]
+position = Vector2(-35, 185)
+scale = Vector2(0.999998, 0.999998)
+texture = ExtResource("13_gbeyn")
+offset = Vector2(-18, 77)
+
+[node name="RThigh" type="Sprite2D" parent="Body"]
+position = Vector2(36, 185)
+scale = Vector2(0.999999, 0.999999)
+texture = ExtResource("14_a54qd")
+offset = Vector2(17, 77)
+
+[node name="Bones" type="Skeleton2D" parent="Body"]
+modification_stack = SubResource("SkeletonModificationStack2D_ropgy")
+
+[node name="Core" type="Bone2D" parent="Body/Bones"]
+position = Vector2(0, 161)
+scale = Vector2(0.999998, 0.999998)
+rest = Transform2D(1, 0, 0, 1, 0, 161)
+
+[node name="Collar" type="Bone2D" parent="Body/Bones/Core"]
+position = Vector2(0, -261)
+rest = Transform2D(1, 0, 0, 1, 0, -261)
+
+[node name="Head" type="Bone2D" parent="Body/Bones/Core/Collar"]
+position = Vector2(0, -221)
+rest = Transform2D(1, 0, 0, 1, 0, -221)
+auto_calculate_length_and_angle = false
+length = 108.192
+bone_angle = 0.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/Head"]
+remote_path = NodePath("../../../../../Head")
+
+[node name="LShoulder" type="Bone2D" parent="Body/Bones/Core/Collar"]
+position = Vector2(-98, 37)
+rest = Transform2D(1, 0, 0, 1, -98, 37)
+
+[node name="LForearm" type="Bone2D" parent="Body/Bones/Core/Collar/LShoulder"]
+position = Vector2(-44, 111)
+rest = Transform2D(1, 0, 0, 1, -44, 111)
+
+[node name="LHand" type="Bone2D" parent="Body/Bones/Core/Collar/LShoulder/LForearm"]
+position = Vector2(-15, 161)
+rest = Transform2D(1, 0, 0, 1, -15, 161)
+auto_calculate_length_and_angle = false
+length = 100.0
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/LShoulder/LForearm/LHand"]
+remote_path = NodePath("../../../../../../../LHand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/LShoulder/LForearm"]
+remote_path = NodePath("../../../../../../LForearm")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/LShoulder"]
+remote_path = NodePath("../../../../../LShoulder")
+
+[node name="RShoulder" type="Bone2D" parent="Body/Bones/Core/Collar"]
+position = Vector2(99, 37)
+rest = Transform2D(1, 0, 0, 1, 99, 37)
+
+[node name="RForearm" type="Bone2D" parent="Body/Bones/Core/Collar/RShoulder"]
+position = Vector2(43, 111)
+rest = Transform2D(1, 0, 0, 1, 43, 111)
+
+[node name="RHand" type="Bone2D" parent="Body/Bones/Core/Collar/RShoulder/RForearm"]
+position = Vector2(15, 160)
+rest = Transform2D(1, 0, 0, 1, 15, 160)
+auto_calculate_length_and_angle = false
+length = 100.0
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/RShoulder/RForearm/RHand"]
+remote_path = NodePath("../../../../../../../RHand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/RShoulder/RForearm"]
+remote_path = NodePath("../../../../../../RForearm")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core/Collar/RShoulder"]
+remote_path = NodePath("../../../../../RShoulder")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Core"]
+remote_path = NodePath("../../../Torso")
+
+[node name="Hip" type="Bone2D" parent="Body/Bones"]
+position = Vector2(0, 161)
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="LThigh" type="Bone2D" parent="Body/Bones/Hip"]
+position = Vector2(-35, 24)
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(1, 0, 0, 1, -35, 24)
+
+[node name="LShin" type="Bone2D" parent="Body/Bones/Hip/LThigh"]
+position = Vector2(-22, 164)
+scale = Vector2(1, 1)
+rest = Transform2D(1, 0, 0, 1, -22, 164)
+auto_calculate_length_and_angle = false
+length = 150.0
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Hip/LThigh/LShin"]
+remote_path = NodePath("../../../../../LShin")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Hip/LThigh"]
+remote_path = NodePath("../../../../LThigh")
+
+[node name="RThigh" type="Bone2D" parent="Body/Bones/Hip"]
+position = Vector2(36, 24)
+scale = Vector2(1, 1)
+rest = Transform2D(1, 0, 0, 1, 36, 24)
+
+[node name="RShin" type="Bone2D" parent="Body/Bones/Hip/RThigh"]
+position = Vector2(21, 164)
+scale = Vector2(1, 1)
+rest = Transform2D(1, 0, 0, 1, 21, 164)
+auto_calculate_length_and_angle = false
+length = 150.0
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Hip/RThigh/RShin"]
+remote_path = NodePath("../../../../../RShin")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body/Bones/Hip/RThigh"]
+remote_path = NodePath("../../../../RThigh")

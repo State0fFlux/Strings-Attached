@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vjh65onieu0a"
-path="res://.godot/imported/Clockwork.png-25fa3734e7e3ae700c5becf2d496d644.ctex"
+uid="uid://bnulr73yqa4gk"
+path="res://.godot/imported/lShoulder.png-de8ac8d70a6d4676cc752de41c224c52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Clockwork.png"
-dest_files=["res://.godot/imported/Clockwork.png-25fa3734e7e3ae700c5becf2d496d644.ctex"]
+source_file="res://art/clockwork/parts/lShoulder.png"
+dest_files=["res://.godot/imported/lShoulder.png-de8ac8d70a6d4676cc752de41c224c52.ctex"]
 
 [params]
 
