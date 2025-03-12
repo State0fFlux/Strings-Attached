@@ -1075,7 +1075,6 @@ metadata/_edit_lock_ = true
 [node name="Head" type="Bone2D" parent="Bones/Core"]
 position = Vector2(3.6333, -377.422)
 rotation = -0.0282672
-scale = Vector2(1, 1)
 rest = Transform2D(0.993339, -0.114078, 0.114078, 0.993339, 0, -482)
 auto_calculate_length_and_angle = false
 length = 108.192

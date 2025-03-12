@@ -1,8 +1,7 @@
-res://character/Clockwork.tscn
+res://scenes/ShowManager.tscn
 res://resources/left_movement.tres
 res://resources/right_movement.tres
-res://scenes/Act0.tscn
-res://character/Clockwork.gd
-res://scenes/ShowManager.tscn
 res://scenes/ActI.tscn
 res://scenes/ControlRoom.tscn
+res://character/Clockwork.tscn
+res://scenes/Act0.tscn
