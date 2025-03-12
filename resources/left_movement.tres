@@ -1,0 +1,74 @@
+[gd_resource type="SkeletonModificationStack2D" load_steps=8 format=3 uid="uid://bx70v3daoevc6"]
+
+[ext_resource type="SkeletonModification2DLookAt" uid="uid://bktg2rmj8ipgj" path="res://resources/head_movement.tres" id="1_cp4nq"]
+
+[sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_cp4nq"]
+target_nodepath = NodePath("../IKTargets/LLegTarget")
+fabrik_data_chain_length = 2
+joint_data/0/bone_index = 9
+joint_data/0/bone2d_node = NodePath("Hip/LThigh")
+joint_data/1/bone_index = 10
+joint_data/1/bone2d_node = NodePath("Hip/LThigh/LShin")
+joint_data/1/magnet_position = Vector2(-15, 0)
+joint_data/1/use_target_rotation = false
+
+[sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_6wmjk"]
+target_nodepath = NodePath("../IKTargets/RLegTarget")
+fabrik_data_chain_length = 2
+joint_data/0/bone_index = 11
+joint_data/0/bone2d_node = NodePath("Hip/RThigh")
+joint_data/1/bone_index = 12
+joint_data/1/bone2d_node = NodePath("Hip/RThigh/RShin")
+joint_data/1/magnet_position = Vector2(-15, 0)
+joint_data/1/use_target_rotation = false
+
+[sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_7xl7f"]
+target_nodepath = NodePath("../IKTargets/LArmTarget")
+fabrik_data_chain_length = 2
+joint_data/0/bone_index = 1
+joint_data/0/bone2d_node = NodePath("Core/LShoulder")
+joint_data/1/bone_index = 2
+joint_data/1/bone2d_node = NodePath("Core/LShoulder/LForearm")
+joint_data/1/magnet_position = Vector2(15, 0)
+joint_data/1/use_target_rotation = false
+
+[sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_hjmxr"]
+target_nodepath = NodePath("../IKTargets/RArmTarget")
+fabrik_data_chain_length = 2
+joint_data/0/bone_index = 4
+joint_data/0/bone2d_node = NodePath("Core/RShoulder")
+joint_data/1/bone_index = 5
+joint_data/1/bone2d_node = NodePath("Core/RShoulder/RForearm")
+joint_data/1/magnet_position = Vector2(15, 0)
+joint_data/1/use_target_rotation = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_r5bqu"]
+bone_index = 3
+bone2d_node = NodePath("Core/LShoulder/LForearm/LHand")
+target_nodepath = NodePath("../IKTargets/LFingerTarget")
+enable_constraint = true
+constraint_angle_min = -65.0
+constraint_angle_max = 65.0
+constraint_angle_invert = true
+constraint_in_localspace = true
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_pcgpt"]
+bone_index = 6
+bone2d_node = NodePath("Core/RShoulder/RForearm/RHand")
+target_nodepath = NodePath("../IKTargets/RFingerTarget")
+enable_constraint = true
+constraint_angle_min = -65.0
+constraint_angle_max = 65.0
+constraint_angle_invert = true
+constraint_in_localspace = true
+
+[resource]
+enabled = true
+modification_count = 7
+modifications/0 = ExtResource("1_cp4nq")
+modifications/1 = SubResource("SkeletonModification2DFABRIK_cp4nq")
+modifications/2 = SubResource("SkeletonModification2DFABRIK_6wmjk")
+modifications/3 = SubResource("SkeletonModification2DFABRIK_7xl7f")
+modifications/4 = SubResource("SkeletonModification2DFABRIK_hjmxr")
+modifications/5 = SubResource("SkeletonModification2DLookAt_r5bqu")
+modifications/6 = SubResource("SkeletonModification2DLookAt_pcgpt")
