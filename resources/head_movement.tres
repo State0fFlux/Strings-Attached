@@ -1,0 +1,11 @@
+[gd_resource type="SkeletonModification2DLookAt" format=3 uid="uid://bktg2rmj8ipgj"]
+
+[resource]
+bone_index = 7
+bone2d_node = NodePath("Core/Head")
+target_nodepath = NodePath("../IKTargets/EyeTarget")
+enable_constraint = true
+constraint_angle_min = -50.0
+constraint_angle_max = 50.0
+constraint_angle_invert = true
+constraint_in_localspace = true
