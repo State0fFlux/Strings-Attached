@@ -5,3 +5,4 @@ res://scenes/ActI.tscn
 res://scenes/ControlRoom.tscn
 res://character/Clockwork.tscn
 res://scenes/Act0.tscn
+res://character/Clockwork.gd

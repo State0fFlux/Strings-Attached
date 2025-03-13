@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -500
-const SPEED = 550
+const JUMP_VELOCITY = -1000 # -500
+const SPEED = 650
+const weight = 8 # 4
 
 var immobilized = false
 var facing = "Right"
@@ -9,19 +10,33 @@ var facing = "Right"
 @onready var anim = $AnimationPlayer
 @onready var head_sprite = $Body/Head
 @onready var head_bone = $Bones/Core/Head
+@onready var jump_timer = $JumpTimer
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Handle vertical movement
 	if not is_on_floor():
-		anim.play("jump" + facing)
-		velocity += get_gravity() * delta
-	# Handle jump.
+		if velocity.y < 0: # going up
+			anim.play("jump" + facing)
+			#velocity += get_gravity() * delta
+		else: # going down
+			anim.play("fall" + facing)
+			#velocity += get_gravity() * delta * weight
+		if jump_timer.is_stopped() or velocity.y > 0: # apply weighted gravity
+			print("hard")
+			velocity += get_gravity() * delta * weight
+		else: # slower fall
+			print("soft")
+			velocity += get_gravity() * delta
+			
+	# Handle jump input
 	if Input.is_action_just_pressed("Jump") and is_on_floor() and not immobilized:
 		velocity.y = JUMP_VELOCITY
+		jump_timer.start()
+	if Input.is_action_just_released("Jump") and not is_on_floor() and not immobilized:
+		jump_timer.stop()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Handle horizontal movement
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not immobilized:
 		velocity.x = direction * SPEED
