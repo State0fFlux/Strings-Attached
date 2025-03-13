@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -1000 # -500
-const SPEED = 650
-const weight = 8 # 4
+# vertical movement
+const weight = 7
+@onready var JUMP_HEIGHT = -sqrt(0.5 * 980 * weight * 600) # -1000
+const jump_limit = 2
+var jump_count = 0
+
+# horizontal movement
+const WALK_SPEED = 600
+const JUMP_SPEED = 700
+var facing = "Right"
 
 var immobilized = false
-var facing = "Right"
 @onready var player = $"."
 @onready var anim = $AnimationPlayer
 @onready var head_sprite = $Body/Head
 @onready var head_bone = $Bones/Core/Head
 @onready var jump_timer = $JumpTimer
-
 
 func _physics_process(delta: float) -> void:
 	# Handle vertical movement
@@ -22,24 +27,19 @@ func _physics_process(delta: float) -> void:
 		else: # going down
 			anim.play("fall" + facing)
 			#velocity += get_gravity() * delta * weight
-		if jump_timer.is_stopped() or velocity.y > 0: # apply weighted gravity
-			print("hard")
-			velocity += get_gravity() * delta * weight
-		else: # slower fall
-			print("soft")
-			velocity += get_gravity() * delta
-			
+		velocity += get_gravity() * delta * weight
+	else:
+		jump_count = 0
+		
 	# Handle jump input
-	if Input.is_action_just_pressed("Jump") and is_on_floor() and not immobilized:
-		velocity.y = JUMP_VELOCITY
-		jump_timer.start()
-	if Input.is_action_just_released("Jump") and not is_on_floor() and not immobilized:
-		jump_timer.stop()
+	if Input.is_action_just_pressed("Jump") and jump_count < jump_limit and not immobilized:
+		velocity.y = JUMP_HEIGHT
+		jump_count += 1
 
 	# Handle horizontal movement
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not immobilized:
-		velocity.x = direction * SPEED
+		velocity.x = direction * (WALK_SPEED if jump_count <= 1 else JUMP_SPEED)
 		if direction < 0:
 			facing = "Left"
 		else:
@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			anim.play("walk" + facing)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, (WALK_SPEED if jump_count <= 1 else JUMP_SPEED))
 		if is_on_floor():
 			anim.play("idle" + facing)
 	move_and_slide()

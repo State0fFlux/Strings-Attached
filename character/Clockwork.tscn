@@ -874,17 +874,17 @@ z_index = 1
 [node name="RLeg" type="Node2D" parent="Body/Right"]
 
 [node name="RShin" type="Sprite2D" parent="Body/Right/RLeg"]
-position = Vector2(-30.3732, 336.929)
-rotation = -0.659275
-scale = Vector2(1.00076, 1.00076)
+position = Vector2(-30.1797, 336.929)
+rotation = -0.658294
+scale = Vector2(0.999877, 0.999877)
 texture = ExtResource("12_b48ef")
 offset = Vector2(-5, 81)
 metadata/_edit_lock_ = true
 
 [node name="RThigh" type="Sprite2D" parent="Body/Right/RLeg"]
-position = Vector2(34.7647, 185)
-rotation = 0.532389
-scale = Vector2(0.999786, 0.999786)
+position = Vector2(34.9993, 185)
+rotation = 0.532617
+scale = Vector2(0.999887, 0.999887)
 texture = ExtResource("14_a54qd")
 offset = Vector2(17, 77)
 metadata/_edit_lock_ = true
@@ -954,7 +954,7 @@ offset = Vector2(-18, 77)
 [node name="LHand" type="Sprite2D" parent="Body/Left/LArm"]
 position = Vector2(-223.118, 174.592)
 rotation = 0.324611
-scale = Vector2(0.999521, 0.999521)
+scale = Vector2(0.999522, 0.999522)
 texture = ExtResource("5_8q1fb")
 offset = Vector2(6, 56)
 metadata/_edit_lock_ = true
