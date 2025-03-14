@@ -1,4 +1,6 @@
-Strings Attached is a puzzle-platformer game that guides you through the job of a clockwork puppet, who is responsible for managing and starring in a one-man show.
+# Writhe or Wrong
+
+**Strings Attached** is a puzzle-platformer game that guides you through the job of a clockwork puppet, who is responsible for managing and starring in a one-man show.
 
 Backstage, the player will have to dynamically manipulate the map to traverse the area, as well as decipher the scene's themes and appropriate costuming, to ensure that they are in costume and ready for the stage in time!
 
