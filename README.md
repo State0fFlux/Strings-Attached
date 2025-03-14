@@ -1,4 +1,4 @@
-# Writhe or Wrong
+# Strings Attached
 
 **Strings Attached** is a puzzle-platformer game that guides you through the job of a clockwork puppet, who is responsible for managing and starring in a one-man show.
 
