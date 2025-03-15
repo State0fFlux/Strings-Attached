@@ -2,24 +2,34 @@ extends CharacterBody2D
 
 # vertical movement
 const weight = 7
-@onready var JUMP_HEIGHT = -sqrt(0.5 * 980 * weight * 600) # -1000
 const jump_limit = 2
 var jump_count = 0
+@onready var JUMP_HEIGHT = -sqrt(0.5 * 980 * weight * 600) # -1000
+@onready var jump_timer = $JumpTimer
 
 # horizontal movement
 const WALK_SPEED = 600
 const JUMP_SPEED = 700
 var facing = "Right"
 
+var health = 100
+var invincible = false
+@onready var invincible_timer = $InvincibilityTimer
 var immobilized = false
+@onready var respawn_point = get_parent().get_node("RespawnPoint")  # Reference to respawn marker
+
 @onready var player = $"."
 @onready var anim = $AnimationPlayer
 @onready var head_sprite = $Body/Head
 @onready var head_bone = $Bones/Core/Head
-@onready var jump_timer = $JumpTimer
-@onready var respawn_point = get_parent().get_node("RespawnPoint")  # Reference to respawn marker
+@onready var body = $Body
 
 func _physics_process(delta: float) -> void:
+	# handles death
+	if health <= 0:
+		position = respawn_point.position
+		health = 100
+		
 	# Handle vertical movement
 	if not is_on_floor():
 		if velocity.y < 0: # going up
@@ -46,7 +56,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			facing = "Right"
 		if is_on_floor():
-			anim.play("walk" + facing)
+			anim.play("walk" + ("Injured" if health <= 50 else "") + facing)
 	else:
 		velocity.x = move_toward(velocity.x, 0, (WALK_SPEED if jump_count <= 1 else JUMP_SPEED))
 		if is_on_floor():
@@ -69,3 +79,19 @@ func die():
 	
 func immobilize(boolean):
 	immobilized = boolean
+	
+func take_damage(amount):
+	if not invincible:
+		health -= amount
+		if body.material:
+			var tween = create_tween()
+			tween.tween_method(set_flash_modifier, 1.0, 0.0, 0.2)
+		invincible = true
+		invincible_timer.start()
+
+func _on_invincibility_timer_timeout() -> void:
+	invincible = false
+
+func set_flash_modifier(value: float) -> void:
+	if body.material:
+		body.material.set_shader_parameter("strength", value)

@@ -1,3 +1,5 @@
+CanvasGroup
+Timer
 RemoteTransform2D
 Bone2D
 Sprite2D
@@ -9,6 +11,5 @@ StaticBody2D
 CollisionPolygon2D
 PointLight2D
 Line2D
-Timer
 ColorRect
 AnimationPlayer
