@@ -1,7 +1,7 @@
-res://resources
 res://scripts
+res://scenes
+res://resources
 res://character
 res://shaders
-res://scenes
 res://globals
 res://textures

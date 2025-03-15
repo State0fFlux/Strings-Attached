@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvitdqes4d4yf"]
+
+[ext_resource type="Script" uid="uid://bkiu86og477k" path="res://scripts/sprinkler.gd" id="1_13fbt"]
+[ext_resource type="Texture2D" uid="uid://mb6r3ssw24vj" path="res://icon.svg" id="3_l2j7f"]
+
+[node name="Sprinkler" type="Node2D"]
+script = ExtResource("1_13fbt")
+
+[node name="Water" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Water"]
+color = Color(0.0313726, 1, 1, 1)
+offset = Vector2(-768, 448)
+polygon = PackedVector2Array(768, -448, 704, 0, 832, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Water"]
+polygon = PackedVector2Array(-64, 448, 0, 0, 64, 448)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.1875)
+texture = ExtResource("3_l2j7f")
+
+[connection signal="body_entered" from="Water" to="." method="_on_water_body_entered"]

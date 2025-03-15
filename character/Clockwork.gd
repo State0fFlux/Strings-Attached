@@ -17,6 +17,7 @@ var immobilized = false
 @onready var head_sprite = $Body/Head
 @onready var head_bone = $Bones/Core/Head
 @onready var jump_timer = $JumpTimer
+@onready var respawn_point = get_parent().get_node("RespawnPoint")  # Reference to respawn marker
 
 func _physics_process(delta: float) -> void:
 	# Handle vertical movement
@@ -62,5 +63,9 @@ func _process(delta: float) -> void:
 			head_sprite.flip_h = false
 			head_bone.set_bone_angle(0)
 			
+func die():
+	position = respawn_point.position  # Move player back to start
+	
+	
 func immobilize(boolean):
 	immobilized = boolean

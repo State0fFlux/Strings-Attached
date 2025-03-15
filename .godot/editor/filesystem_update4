@@ -5,4 +5,9 @@ res://scenes/ActI.tscn
 res://scenes/ControlRoom.tscn
 res://character/Clockwork.tscn
 res://scenes/Act0.tscn
+res://scenes/water.gd
 res://character/Clockwork.gd
+res://scripts/valve.gd
+res://scenes/Sprinkler.tscn
+res://scenes/Valve.tscn
+res://scripts/sprinkler.gd

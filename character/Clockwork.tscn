@@ -822,7 +822,8 @@ _data = {
 &"walkRight": SubResource("Animation_o3i88")
 }
 
-[node name="Clockwork" type="CharacterBody2D"]
+[node name="Clockwork" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 7
 script = ExtResource("1_5jucb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -830,6 +831,7 @@ position = Vector2(-1.5, -23)
 limit_bottom = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 z_index = -2
 shape = SubResource("RectangleShape2D_8q1fb")
 
@@ -838,12 +840,6 @@ shape = SubResource("RectangleShape2D_8q1fb")
 [node name="EyeTarget" type="Node2D" parent="IKTargets"]
 position = Vector2(800, -300)
 script = ExtResource("2_8q1fb")
-
-[node name="ColorRect" type="ColorRect" parent="IKTargets/EyeTarget"]
-offset_left = -43.0
-offset_top = -45.0
-offset_right = 45.0
-offset_bottom = 43.0
 
 [node name="LArmTarget" type="Node2D" parent="IKTargets"]
 position = Vector2(-237, 192)
@@ -855,10 +851,10 @@ position = Vector2(257, 212)
 position = Vector2(1, -101)
 
 [node name="LLegTarget" type="Node2D" parent="IKTargets"]
-position = Vector2(-65, 260)
+position = Vector2(38.4, 438)
 
 [node name="RLegTarget" type="Node2D" parent="IKTargets"]
-position = Vector2(65, 460)
+position = Vector2(-38.4, 282)
 
 [node name="LFingerTarget" type="Node2D" parent="IKTargets"]
 position = Vector2(-302, 409)
@@ -869,22 +865,23 @@ position = Vector2(339, 284)
 [node name="Body" type="Node2D" parent="."]
 
 [node name="Right" type="Node2D" parent="Body"]
-z_index = 1
+modulate = Color(0.726732, 0.726732, 0.726732, 1)
+z_index = -1
 
 [node name="RLeg" type="Node2D" parent="Body/Right"]
 
 [node name="RShin" type="Sprite2D" parent="Body/Right/RLeg"]
-position = Vector2(-30.1797, 336.929)
-rotation = -0.658294
-scale = Vector2(0.999877, 0.999877)
+position = Vector2(121.004, 326.139)
+rotation = 1.84093
+scale = Vector2(0.999698, 0.999698)
 texture = ExtResource("12_b48ef")
 offset = Vector2(-5, 81)
 metadata/_edit_lock_ = true
 
 [node name="RThigh" type="Sprite2D" parent="Body/Right/RLeg"]
-position = Vector2(34.9993, 185)
-rotation = 0.532617
-scale = Vector2(0.999887, 0.999887)
+position = Vector2(34.9573, 185)
+rotation = -0.420139
+scale = Vector2(0.999767, 0.999767)
 texture = ExtResource("14_a54qd")
 offset = Vector2(17, 77)
 metadata/_edit_lock_ = true
@@ -892,116 +889,116 @@ metadata/_edit_lock_ = true
 [node name="RArm" type="Node2D" parent="Body/Right"]
 
 [node name="RHand" type="Sprite2D" parent="Body/Right/RArm"]
-position = Vector2(244.026, 180.175)
-rotation = -0.740906
+position = Vector2(224.941, 177.559)
+rotation = -0.819934
 scale = Vector2(0.999559, 0.999559)
 texture = ExtResource("8_ym88w")
 offset = Vector2(-6, 56)
 metadata/_edit_lock_ = true
 
 [node name="RForearm" type="Sprite2D" parent="Body/Right/RArm"]
-position = Vector2(183.381, 31.4149)
-rotation = -0.293622
-scale = Vector2(0.99966, 0.99966)
+position = Vector2(115.484, 59.9713)
+rotation = -0.656125
+scale = Vector2(0.999663, 0.999663)
 texture = ExtResource("9_p0vnl")
 offset = Vector2(14, 81)
 metadata/_edit_lock_ = true
 
 [node name="RShoulder" type="Sprite2D" parent="Body/Right/RArm"]
-position = Vector2(105.557, -58.6151)
-rotation = -0.343226
-scale = Vector2(0.99972, 0.99972)
+position = Vector2(105.557, -58.6185)
+rotation = 0.28608
+scale = Vector2(0.999721, 0.999721)
 texture = ExtResource("10_4pjga")
 offset = Vector2(18, 39)
 metadata/_edit_lock_ = true
 
 [node name="Torso" type="Sprite2D" parent="Body"]
 position = Vector2(-1, 161)
-rotation = 0.0354357
+rotation = 0.0354358
 scale = Vector2(0.999858, 0.999858)
 texture = ExtResource("3_ropgy")
 offset = Vector2(-1, -161)
+metadata/_edit_lock_ = true
 
 [node name="Head" type="Sprite2D" parent="Body"]
-position = Vector2(16, -216.003)
-rotation = 0.00716849
-scale = Vector2(0.999859, 0.999859)
+position = Vector2(1.90735e-06, -192)
+rotation = -0.0202887
+scale = Vector2(0.999846, 0.999846)
 texture = ExtResource("3_4yfbs")
 offset = Vector2(-1.09521, -104.567)
 
 [node name="Left" type="Node2D" parent="Body"]
-modulate = Color(0.72549, 0.72549, 0.72549, 1)
-z_index = -1
+z_index = 1
 
 [node name="LLeg" type="Node2D" parent="Body/Left"]
 
 [node name="LShin" type="Sprite2D" parent="Body/Left/LLeg"]
-position = Vector2(-198.86, 214.169)
-rotation = -1.24093
-scale = Vector2(0.999889, 0.999889)
+position = Vector2(92.1598, 289.634)
+rotation = 0.34763
+scale = Vector2(0.999866, 0.999866)
 texture = ExtResource("11_bc03q")
 offset = Vector2(5, 81)
 
 [node name="LThigh" type="Sprite2D" parent="Body/Left/LLeg"]
 position = Vector2(-36, 185)
-rotation = 1.26022
-scale = Vector2(0.999895, 0.999895)
+rotation = -1.01947
+scale = Vector2(0.999874, 0.999874)
 texture = ExtResource("13_gbeyn")
 offset = Vector2(-18, 77)
 
 [node name="LArm" type="Node2D" parent="Body/Left"]
 
 [node name="LHand" type="Sprite2D" parent="Body/Left/LArm"]
-position = Vector2(-223.118, 174.592)
-rotation = 0.324611
-scale = Vector2(0.999522, 0.999522)
+position = Vector2(-228.174, 148.395)
+rotation = 0.276053
+scale = Vector2(0.999524, 0.999524)
 texture = ExtResource("5_8q1fb")
 offset = Vector2(6, 56)
 metadata/_edit_lock_ = true
 
 [node name="LForearm" type="Sprite2D" parent="Body/Left/LArm"]
-position = Vector2(-122.347, 48.2253)
-rotation = 0.580277
-scale = Vector2(0.999638, 0.999638)
+position = Vector2(-196.11, -10.0197)
+rotation = 0.1068
+scale = Vector2(0.999639, 0.999639)
 texture = ExtResource("6_ewfl5")
 offset = Vector2(-14, 81)
 metadata/_edit_lock_ = true
 
 [node name="LShoulder" type="Sprite2D" parent="Body/Left/LArm"]
-position = Vector2(-91.2248, -67.0228)
-rotation = -0.113626
-scale = Vector2(0.999732, 0.999732)
+position = Vector2(-91.2255, -67.0285)
+rotation = 0.69555
+scale = Vector2(0.999735, 0.999735)
 texture = ExtResource("7_o3i88")
 offset = Vector2(-20, 39)
 metadata/_edit_lock_ = true
 
 [node name="Bones" type="Skeleton2D" parent="."]
 position = Vector2(-1, 0)
-modification_stack = ExtResource("14_8q1fb")
+modification_stack = ExtResource("14_8t3fi")
 
 [node name="Core" type="Bone2D" parent="Bones"]
 position = Vector2(0, 161)
-rotation = 0.0354357
+rotation = 0.0354358
 scale = Vector2(0.999858, 0.999858)
 rest = Transform2D(0.99923, 0.0354233, -0.0354233, 0.99923, 0, 161)
 
 [node name="LShoulder" type="Bone2D" parent="Bones/Core"]
 position = Vector2(-98.2606, -224.715)
-rotation = -0.345324
-scale = Vector2(0.999872, 0.999872)
+rotation = -0.345325
+scale = Vector2(0.999873, 0.999873)
 rest = Transform2D(0.940846, -0.338459, 0.338459, 0.940846, -98.2606, -224.715)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="LForearm" type="Bone2D" parent="Bones/Core/LShoulder"]
 position = Vector2(-44.0001, 111.006)
-rotation = 0.284504
+rotation = 0.284505
 scale = Vector2(0.999907, 0.999907)
 rest = Transform2D(0.959712, 0.280656, -0.280656, 0.959712, -44.0001, 111.006)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="LHand" type="Bone2D" parent="Bones/Core/LShoulder/LForearm"]
 position = Vector2(-15.0002, 160.989)
-rotation = 0.0928892
+rotation = 0.0928893
 scale = Vector2(0.999877, 0.999877)
 rest = Transform2D(0.995566, 0.0927443, -0.0927443, 0.995566, -15.0002, 160.989)
 auto_calculate_length_and_angle = false
@@ -1023,14 +1020,14 @@ remote_path = NodePath("../../../../Body/Left/LArm/LShoulder")
 
 [node name="RShoulder" type="Bone2D" parent="Bones/Core"]
 position = Vector2(98.7231, -223.284)
-rotation = 2.97725
+rotation = 0.283933
 scale = Vector2(0.999862, 0.999862)
 rest = Transform2D(0.959829, 0.280095, -0.280095, 0.959829, 98.7231, -223.284)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="RForearm" type="Bone2D" parent="Bones/Core/RShoulder"]
 position = Vector2(43, 111)
-rotation = -0.27611
+rotation = -0.276109
 scale = Vector2(0.999939, 0.999939)
 rest = Transform2D(0.962065, -0.272598, 0.272598, 0.962065, 43, 111)
 metadata/_local_pose_override_enabled_ = true
@@ -1058,8 +1055,9 @@ metadata/_edit_lock_ = true
 remote_path = NodePath("../../../../Body/Right/RArm/RShoulder")
 
 [node name="Head" type="Bone2D" parent="Bones/Core"]
-position = Vector2(3.6333, -377.422)
-rotation = -0.0282672
+position = Vector2(-11.5085, -352.864)
+rotation = -0.0557245
+scale = Vector2(0.999989, 0.999989)
 rest = Transform2D(0.993339, -0.114078, 0.114078, 0.993339, 0, -482)
 auto_calculate_length_and_angle = false
 length = 108.192
@@ -1068,6 +1066,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Core/Head"]
 remote_path = NodePath("../../../../Body/Head")
+metadata/_edit_lock_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Core"]
 remote_path = NodePath("../../../Body/Torso")

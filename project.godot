@@ -26,6 +26,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+Player=""
+
 [input]
 
 ZoomOut={
@@ -56,8 +60,9 @@ Right={
 
 [layer_names]
 
-2d_physics/layer_1="Physics"
-2d_physics/layer_2="PlayerBounds"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Water"
 
 [rendering]
 

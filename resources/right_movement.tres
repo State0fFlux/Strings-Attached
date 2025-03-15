@@ -17,7 +17,7 @@ joint_data/0/bone_index = 9
 joint_data/0/bone2d_node = NodePath("Hip/LThigh")
 joint_data/1/bone_index = 10
 joint_data/1/bone2d_node = NodePath("Hip/LThigh/LShin")
-joint_data/1/magnet_position = Vector2(15, 0)
+joint_data/1/magnet_position = Vector2(100, 0)
 joint_data/1/use_target_rotation = false
 
 [sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_ropgy"]
@@ -27,7 +27,7 @@ joint_data/0/bone_index = 11
 joint_data/0/bone2d_node = NodePath("Hip/RThigh")
 joint_data/1/bone_index = 12
 joint_data/1/bone2d_node = NodePath("Hip/RThigh/RShin")
-joint_data/1/magnet_position = Vector2(15, 0)
+joint_data/1/magnet_position = Vector2(100, 0)
 joint_data/1/use_target_rotation = false
 
 [sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_8t3fi"]
@@ -37,7 +37,7 @@ joint_data/0/bone_index = 1
 joint_data/0/bone2d_node = NodePath("Core/LShoulder")
 joint_data/1/bone_index = 2
 joint_data/1/bone2d_node = NodePath("Core/LShoulder/LForearm")
-joint_data/1/magnet_position = Vector2(-15, 0)
+joint_data/1/magnet_position = Vector2(-100, 0)
 joint_data/1/use_target_rotation = false
 
 [sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_8q1fb"]
@@ -47,7 +47,7 @@ joint_data/0/bone_index = 4
 joint_data/0/bone2d_node = NodePath("Core/RShoulder")
 joint_data/1/bone_index = 5
 joint_data/1/bone2d_node = NodePath("Core/RShoulder/RForearm")
-joint_data/1/magnet_position = Vector2(-15, 0)
+joint_data/1/magnet_position = Vector2(-100, 0)
 joint_data/1/use_target_rotation = false
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_rwa0t"]
