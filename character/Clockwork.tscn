@@ -929,18 +929,18 @@ use_parent_material = true
 
 [node name="RShin" type="Sprite2D" parent="Body/Right/RLeg"]
 use_parent_material = true
-position = Vector2(-116.601, 218.382)
-rotation = 0.11278
-scale = Vector2(0.999826, 0.999826)
+position = Vector2(-116.491, 218.351)
+rotation = 0.113478
+scale = Vector2(0.999809, 0.999809)
 texture = ExtResource("12_b48ef")
 offset = Vector2(-5, 81)
 metadata/_edit_lock_ = true
 
 [node name="RThigh" type="Sprite2D" parent="Body/Right/RLeg"]
 use_parent_material = true
-position = Vector2(39.8476, 184)
-rotation = 1.40443
-scale = Vector2(0.999764, 0.999764)
+position = Vector2(39.972, 184)
+rotation = 1.40464
+scale = Vector2(0.999808, 0.999808)
 texture = ExtResource("14_a54qd")
 offset = Vector2(8.99902, 77)
 metadata/_edit_lock_ = true
@@ -1054,7 +1054,7 @@ use_parent_material = true
 [node name="LHand" type="Sprite2D" parent="Body/Left/LArm"]
 use_parent_material = true
 position = Vector2(-220.323, 179.577)
-rotation = -0.0103789
+rotation = -0.0103788
 scale = Vector2(0.999538, 0.999538)
 texture = ExtResource("5_8q1fb")
 offset = Vector2(6, 56)

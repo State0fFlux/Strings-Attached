@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4y1unmluaehn"]
+
+[ext_resource type="Script" uid="uid://ceija3jibg5q2" path="res://scripts/eye.gd" id="1_e6m2j"]
+[ext_resource type="Texture2D" uid="uid://bhrsu0fifh7ur" path="res://art/shell/eyeball.png" id="2_e6m2j"]
+[ext_resource type="Texture2D" uid="uid://bf8s6alfb3uj1" path="res://art/shell/iris.png" id="3_hrmh8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wf7k"]
+radius = 40.0
+
+[node name="Eye" type="Node2D"]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+script = ExtResource("1_e6m2j")
+accessory = ExtResource("3_hrmh8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_e6m2j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(6.10352e-05, -3.05176e-05)
+texture = ExtResource("3_hrmh8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7wf7k")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

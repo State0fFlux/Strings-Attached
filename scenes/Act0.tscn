@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=4 uid="uid://da7yyk1vv8c6t"]
+[gd_scene load_steps=14 format=4 uid="uid://da7yyk1vv8c6t"]
 
 [ext_resource type="Texture2D" uid="uid://mb6r3ssw24vj" path="res://icon.svg" id="1_spkpb"]
 [ext_resource type="PackedScene" uid="uid://dbcf4rivvir0h" path="res://character/Clockwork.tscn" id="3_3rtus"]
 [ext_resource type="PackedScene" uid="uid://bw54fiu5d3tjs" path="res://backgrounds/night.tscn" id="3_bq4cc"]
 [ext_resource type="PackedScene" uid="uid://dvitdqes4d4yf" path="res://scenes/Sprinkler.tscn" id="4_c34ri"]
 [ext_resource type="PackedScene" uid="uid://dvgmv6x8gpyno" path="res://scenes/Valve.tscn" id="5_6d3bp"]
+[ext_resource type="PackedScene" uid="uid://bfpjfdta4g37x" path="res://scenes/mask.tscn" id="6_6d3bp"]
+[ext_resource type="PackedScene" uid="uid://c4y1unmluaehn" path="res://scenes/eye.tscn" id="7_22sw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dir3c"]
 texture = ExtResource("1_spkpb")
@@ -258,3 +260,9 @@ position = Vector2(824, -448)
 [node name="Valve" parent="." node_paths=PackedStringArray("pipe") instance=ExtResource("5_6d3bp")]
 position = Vector2(320, -320)
 pipe = NodePath("../Sprinkler")
+
+[node name="Mask" parent="." instance=ExtResource("6_6d3bp")]
+position = Vector2(1056, -192)
+
+[node name="Eye" parent="." instance=ExtResource("7_22sw3")]
+position = Vector2(1216, -192)

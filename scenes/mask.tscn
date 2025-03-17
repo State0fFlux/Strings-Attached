@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfpjfdta4g37x"]
+
+[ext_resource type="Script" uid="uid://cyobhh6p7sx43" path="res://scripts/mask.gd" id="1_rv8xw"]
+[ext_resource type="Texture2D" uid="uid://5w8sief84w06" path="res://art/shell/mask.png" id="2_0d8jk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iidhr"]
+radius = 32.0
+height = 128.0
+
+[node name="Mask" type="Node2D"]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+script = ExtResource("1_rv8xw")
+accessory = ExtResource("2_0d8jk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.10352e-05, -3.05176e-05)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("2_0d8jk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_iidhr")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

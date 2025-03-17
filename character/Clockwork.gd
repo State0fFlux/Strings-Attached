@@ -22,14 +22,18 @@ var immobilized = false
 @onready var anim = $AnimationPlayer
 @onready var head_sprite = $Body/Center/Head
 @onready var head_bone = $Bones/Core/Head
+
 @onready var mask = $Body/Center/Head/Mask
+@onready var l_eyeball = $Body/Center/Head/LEyeball
+@onready var l_iris = $Body/Center/Head/LEyeball/Iris
+@onready var r_eyeball = $Body/Center/Head/REyeball
+@onready var r_iris = $Body/Center/Head/REyeball/Iris
 
 @onready var right = $Body/Right
 @onready var center = $Body/Center
 @onready var left = $Body/Left
 
 func _physics_process(delta: float) -> void:
-	
 	# Handle death
 	if health <= 0:
 		position = respawn_point.position
@@ -100,7 +104,34 @@ func _process(delta: float) -> void:
 func die():
 	position = respawn_point.position  # Move player back to start
 	
-	
+func change_accessory(newAccessory: CompressedTexture2D):
+	var name = newAccessory.resource_path
+	if name.ends_with("mask.png"):
+		change_mask(newAccessory)
+	elif name.ends_with("iris.png"):
+		change_eye(newAccessory)
+		
+func change_mask(newMask: CompressedTexture2D):
+	if newMask == mask.texture:
+		mask.texture = null
+	else:
+		mask.texture = newMask
+
+func change_eye(newIris: CompressedTexture2D):
+	if newIris == r_iris.texture and newIris == l_iris.texture:
+		# remove eyeballs
+		l_iris.texture = null
+		r_iris.texture = null
+		l_eyeball.texture = null
+		r_eyeball.texture = null
+	else:
+		var newEyeball = load("res://art/shell/eyeball.png")
+		# add base eyeball
+		l_eyeball.texture = newEyeball
+		r_eyeball.texture = newEyeball
+		l_iris.texture = newIris
+		r_iris.texture = newIris
+
 func immobilize(boolean):
 	immobilized = boolean
 	
