@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dbcf4rivvir0h"]
+[gd_scene load_steps=42 format=3 uid="uid://dbcf4rivvir0h"]
 
 [ext_resource type="Script" uid="uid://b0tq8mep73oyi" path="res://character/Clockwork.gd" id="1_5jucb"]
 [ext_resource type="Script" uid="uid://cto3t4wtrjark" path="res://scripts/eye_target.gd" id="2_8q1fb"]
@@ -12,8 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://6arit7t34w60" path="res://art/clockwork/front/rForearm.png" id="9_p0vnl"]
 [ext_resource type="Texture2D" uid="uid://y74n1ydtn00u" path="res://art/clockwork/front/rShoulder.png" id="10_4pjga"]
 [ext_resource type="Texture2D" uid="uid://2gym00ysaqhl" path="res://art/clockwork/front/lShin.png" id="11_bc03q"]
+[ext_resource type="Texture2D" uid="uid://5w8sief84w06" path="res://art/shell/mask.png" id="11_o3i88"]
 [ext_resource type="Texture2D" uid="uid://d06bxfuakrb4x" path="res://art/clockwork/front/rShin.png" id="12_b48ef"]
+[ext_resource type="Texture2D" uid="uid://bhrsu0fifh7ur" path="res://art/shell/eyeball.png" id="12_p0vnl"]
+[ext_resource type="Texture2D" uid="uid://bf8s6alfb3uj1" path="res://art/shell/iris.png" id="13_4pjga"]
 [ext_resource type="Texture2D" uid="uid://dq7h0nga2tj11" path="res://art/clockwork/front/lThigh.png" id="13_gbeyn"]
+[ext_resource type="Script" uid="uid://disg7xt0chl7y" path="res://scripts/eyeball.gd" id="14_4pjga"]
 [ext_resource type="SkeletonModificationStack2D" uid="uid://bx70v3daoevc6" path="res://resources/left_movement.tres" id="14_8q1fb"]
 [ext_resource type="SkeletonModificationStack2D" uid="uid://duailn7gy10sx" path="res://resources/right_movement.tres" id="14_8t3fi"]
 [ext_resource type="Texture2D" uid="uid://obfcgnig23ne" path="res://art/clockwork/front/rThigh.png" id="14_a54qd"]
@@ -925,18 +929,18 @@ use_parent_material = true
 
 [node name="RShin" type="Sprite2D" parent="Body/Right/RLeg"]
 use_parent_material = true
-position = Vector2(-121.261, 220.33)
-rotation = 0.0833061
-scale = Vector2(0.999078, 0.999078)
+position = Vector2(-116.601, 218.382)
+rotation = 0.11278
+scale = Vector2(0.999826, 0.999826)
 texture = ExtResource("12_b48ef")
 offset = Vector2(-5, 81)
 metadata/_edit_lock_ = true
 
 [node name="RThigh" type="Sprite2D" parent="Body/Right/RLeg"]
 use_parent_material = true
-position = Vector2(39.8805, 184)
-rotation = 1.47641
-scale = Vector2(0.999073, 0.999073)
+position = Vector2(39.8476, 184)
+rotation = 1.40443
+scale = Vector2(0.999764, 0.999764)
 texture = ExtResource("14_a54qd")
 offset = Vector2(8.99902, 77)
 metadata/_edit_lock_ = true
@@ -946,27 +950,27 @@ use_parent_material = true
 
 [node name="RHand" type="Sprite2D" parent="Body/Right/RArm"]
 use_parent_material = true
-position = Vector2(152.954, 147.623)
-rotation = -0.870031
-scale = Vector2(0.999755, 0.999755)
+position = Vector2(156.787, 156.862)
+rotation = -0.800007
+scale = Vector2(0.99959, 0.99959)
 texture = ExtResource("8_ym88w")
 offset = Vector2(-6, 56)
 metadata/_edit_lock_ = true
 
 [node name="RForearm" type="Sprite2D" parent="Body/Right/RArm"]
 use_parent_material = true
-position = Vector2(138.378, -12.3938)
-rotation = 0.00263355
-scale = Vector2(0.999861, 0.999861)
+position = Vector2(153.443, -3.75621)
+rotation = 0.0726578
+scale = Vector2(0.999696, 0.999696)
 texture = ExtResource("9_p0vnl")
 offset = Vector2(14, 81)
 metadata/_edit_lock_ = true
 
 [node name="RShoulder" type="Sprite2D" parent="Body/Right/RArm"]
 use_parent_material = true
-position = Vector2(45.7214, -87.1001)
-rotation = -0.522655
-scale = Vector2(0.999865, 0.999865)
+position = Vector2(49.8253, -86.2158)
+rotation = -0.420286
+scale = Vector2(0.99975, 0.99975)
 texture = ExtResource("10_4pjga")
 offset = Vector2(18, 47.002)
 metadata/_edit_lock_ = true
@@ -978,8 +982,8 @@ material = SubResource("ShaderMaterial_ewfl5")
 z_index = -2
 use_parent_material = true
 position = Vector2(-1, 161)
-rotation = -0.166661
-scale = Vector2(0.999892, 0.999892)
+rotation = -0.150013
+scale = Vector2(0.999859, 0.999859)
 texture = ExtResource("3_ropgy")
 offset = Vector2(-1, -161)
 metadata/_edit_lock_ = true
@@ -987,12 +991,37 @@ metadata/_edit_lock_ = true
 [node name="Head" type="Sprite2D" parent="Body/Center"]
 z_index = -2
 use_parent_material = true
-position = Vector2(-71.6096, -184.909)
-rotation = -0.131285
-scale = Vector2(0.999865, 0.999865)
+position = Vector2(-65.831, -185.997)
+rotation = -0.130916
+scale = Vector2(0.999856, 0.999856)
 texture = ExtResource("3_4yfbs")
 offset = Vector2(-1.09521, -104.567)
 metadata/_edit_lock_ = true
+
+[node name="Mask" type="Sprite2D" parent="Body/Center/Head"]
+z_index = 1
+position = Vector2(56.9633, -104.477)
+texture = ExtResource("11_o3i88")
+
+[node name="LEyeball" type="Sprite2D" parent="Body/Center/Head"]
+position = Vector2(34.4461, -132.661)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_p0vnl")
+script = ExtResource("14_4pjga")
+
+[node name="Iris" type="Sprite2D" parent="Body/Center/Head/LEyeball"]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("13_4pjga")
+
+[node name="REyeball" type="Sprite2D" parent="Body/Center/Head"]
+position = Vector2(119.175, -132.602)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_p0vnl")
+script = ExtResource("14_4pjga")
+
+[node name="Iris" type="Sprite2D" parent="Body/Center/Head/REyeball"]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("13_4pjga")
 
 [node name="Left" type="Node2D" parent="Body"]
 z_index = -3
@@ -1003,9 +1032,9 @@ use_parent_material = true
 
 [node name="LShin" type="Sprite2D" parent="Body/Left/LLeg"]
 use_parent_material = true
-position = Vector2(-16.3591, 347.683)
-rotation = -1.55192
-scale = Vector2(0.999466, 0.999466)
+position = Vector2(-16.6655, 342.491)
+rotation = -1.51749
+scale = Vector2(0.999889, 0.999889)
 texture = ExtResource("11_bc03q")
 offset = Vector2(3.99748, 80.8457)
 metadata/_edit_lock_ = true
@@ -1013,8 +1042,8 @@ metadata/_edit_lock_ = true
 [node name="LThigh" type="Sprite2D" parent="Body/Left/LLeg"]
 use_parent_material = true
 position = Vector2(-40, 184)
-rotation = -0.27679
-scale = Vector2(0.999468, 0.999468)
+rotation = -0.196137
+scale = Vector2(0.999895, 0.999895)
 texture = ExtResource("13_gbeyn")
 offset = Vector2(-1.99832, 75.9999)
 metadata/_edit_lock_ = true
@@ -1024,27 +1053,27 @@ use_parent_material = true
 
 [node name="LHand" type="Sprite2D" parent="Body/Left/LArm"]
 use_parent_material = true
-position = Vector2(-208.139, 185.633)
-rotation = -0.160514
-scale = Vector2(0.999685, 0.999685)
+position = Vector2(-220.323, 179.577)
+rotation = -0.0103789
+scale = Vector2(0.999538, 0.999538)
 texture = ExtResource("5_8q1fb")
 offset = Vector2(6, 56)
 metadata/_edit_lock_ = true
 
 [node name="LForearm" type="Sprite2D" parent="Body/Left/LArm"]
 use_parent_material = true
-position = Vector2(-102.441, 65.2183)
-rotation = 0.712151
-scale = Vector2(0.999811, 0.999811)
+position = Vector2(-97.8215, 76.3409)
+rotation = 0.862286
+scale = Vector2(0.999664, 0.999664)
 texture = ExtResource("6_ewfl5")
 offset = Vector2(-14, 81)
 metadata/_edit_lock_ = true
 
 [node name="LShoulder" type="Sprite2D" parent="Body/Left/LArm"]
 use_parent_material = true
-position = Vector2(-142.17, -47.3738)
-rotation = -0.716597
-scale = Vector2(0.999896, 0.999896)
+position = Vector2(-138.657, -49.6294)
+rotation = -0.708403
+scale = Vector2(0.999752, 0.999752)
 texture = ExtResource("7_o3i88")
 offset = Vector2(-19.058, 46.6073)
 metadata/_edit_lock_ = true

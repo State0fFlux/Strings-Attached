@@ -22,6 +22,7 @@ var immobilized = false
 @onready var anim = $AnimationPlayer
 @onready var head_sprite = $Body/Center/Head
 @onready var head_bone = $Bones/Core/Head
+@onready var mask = $Body/Center/Head/Mask
 
 @onready var right = $Body/Right
 @onready var center = $Body/Center
@@ -88,10 +89,12 @@ func _process(delta: float) -> void:
 	if get_global_mouse_position().x < global_position.x:
 		if not head_sprite.flip_h:
 			head_sprite.flip_h = true
+			mask.flip_h = true
 			head_bone.set_bone_angle(180)
 	else:
 		if head_sprite.flip_h:
 			head_sprite.flip_h = false
+			mask.flip_h = false
 			head_bone.set_bone_angle(0)
 			
 func die():

@@ -1,14 +1,14 @@
+Sprite2D
 Node2D
+RemoteTransform2D
+GPUParticles2D
 CanvasLayer
 ColorRect
 CanvasModulate
 CanvasGroup
 Timer
-RemoteTransform2D
 Bone2D
-Sprite2D
 Polygon2D
 CollisionShape2D
 Area2D
 StaticBody2D
-CollisionPolygon2D
