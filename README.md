@@ -8,13 +8,13 @@ On-stage, the player will engage in combat and dialogue to act out each scene. B
 
 ## Game Overview
 - **Genre**: Puzzle, Platformer
-- **Concept**: Traverse through scenes in a stage play, whilst deciphering appropriate costume changes and on-stage actions
+- **Concept**: Traverse through scenes in a stage play, whilst deciphering appropriate costume changes and on-stage actions.
 - **Goal**: Break a leg!
 
 ## Features
-- Deciphering theatrical themes based on context clues, inspired by *We Were Here*
-- Dynamic wardrobe and cosmetic customization options fit for various theatrical scenes
-- Health mechanics that penalize poor traversal of each level
+- Deciphering theatrical themes based on context clues, inspired by *We Were Here*.
+- Dynamic wardrobe and cosmetic customization options fit for various theatrical scenes.
+- Health mechanics that penalize poor traversal of each level.
 
 ## Technology Stack
 - **Engine**: Godot 4.3
