@@ -1,4 +1,4 @@
-res://scenes/prop_crate.tscn
+res://scenes/ShowManager.tscn
 res://shaders/Clockwork.gdshader
 res://resources/left_movement.tres
 res://resources/right_movement.tres
@@ -6,16 +6,11 @@ res://shaders/Fire.gdshader
 res://textures/smoke.tres
 res://shaders/Water.gdshader
 res://textures/radial_light.tres
-res://scripts/prop_crate.gd
-res://scenes/ShowManager.tscn
 res://scenes/ActI.tscn
 res://scenes/ControlRoom.tscn
 res://character/Clockwork.tscn
 res://scenes/Act0.tscn
 res://scenes/Sprinkler.tscn
 res://scenes/Valve.tscn
-res://character/Clockwork.gd
-res://scenes/eye.tscn
 res://scenes/mask.tscn
-res://scripts/eye.gd
-res://scripts/mask.gd
+res://scenes/eye.tscn

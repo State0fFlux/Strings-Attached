@@ -1,15 +1,11 @@
 extends CharacterBody2D
 
 # vertical movement
-const weight = 7
-const jump_limit = 2
-var jump_count = 0
+const weight = 4
 @onready var JUMP_HEIGHT = -sqrt(0.5 * 980 * weight * 600) # -1000
-@onready var jump_timer = $JumpTimer
 
 # horizontal movement
-var walk_speed = 600
-var jump_speed = 700
+var walk_speed = 750.0
 var facing = "Right"
 
 var health = 100
@@ -38,8 +34,6 @@ func _physics_process(delta: float) -> void:
 	if health <= 0:
 		position = respawn_point.position
 		health = 100
-		walk_speed = 600
-		jump_speed = 700
 		
 	# Handle shadowing & ordering
 	if facing == "Left":
@@ -65,18 +59,15 @@ func _physics_process(delta: float) -> void:
 			anim.play("fall" + facing)
 			#velocity += get_gravity() * delta * weight
 		velocity += get_gravity() * delta * weight
-	else:
-		jump_count = 0
 		
 	# Handle jump input
-	if Input.is_action_just_pressed("Jump") and jump_count < jump_limit and not immobilized:
+	elif Input.is_action_just_pressed("Jump") and not immobilized:
 		velocity.y = JUMP_HEIGHT
-		jump_count += 1
 
 	# Handle horizontal movement
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not immobilized:
-		velocity.x = direction * (walk_speed if jump_count <= 1 else jump_speed)
+		velocity.x = direction * walk_speed
 		if direction < 0:
 			facing = "Left"
 		else:
@@ -84,7 +75,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			anim.play("walk" + ("Injured" if health <= 50 else "") + facing)
 	else:
-		velocity.x = move_toward(velocity.x, 0, (walk_speed if jump_count <= 1 else jump_speed))
+		velocity.x = move_toward(velocity.x, 0, walk_speed)
 		if is_on_floor():
 			anim.play("idle" + facing)
 	move_and_slide()
@@ -140,8 +131,6 @@ func take_damage(amount):
 		health -= amount
 		
 		# TODO: these should prob go somewhere else
-		walk_speed *= 0.75
-		jump_speed *= 1
 		
 		if left.material and right.material and center.material:
 			var tween = create_tween().set_parallel(true)

@@ -232,6 +232,10 @@ sources/0 = SubResource("TileSetAtlasSource_2chqy")
 
 [node name="Act0" type="Node2D"]
 
+[node name="Clockwork" parent="." instance=ExtResource("3_3rtus")]
+position = Vector2(462, -138)
+scale = Vector2(0.25, 0.25)
+
 [node name="RespawnPoint" type="Node2D" parent="."]
 position = Vector2(462, -138)
 scale = Vector2(0.25, 0.25)
@@ -247,10 +251,6 @@ tile_set = SubResource("TileSet_8lvg8")
 [node name="Crates" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAP//AAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAOAP//AAAAAAAAAAAOAP7/AAAAAAAAAAAPAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_o1n4n")
-
-[node name="Clockwork" parent="." instance=ExtResource("3_3rtus")]
-position = Vector2(462, -138)
-scale = Vector2(0.25, 0.25)
 
 [node name="NightBG" parent="." instance=ExtResource("3_bq4cc")]
 
