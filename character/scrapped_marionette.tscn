@@ -1,0 +1,284 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6n7wb35i7vkf"]
+
+[ext_resource type="Texture2D" uid="uid://bqhh1bfj6bx1u" path="res://art/scrapped/head.png" id="1_utkye"]
+[ext_resource type="Script" uid="uid://b0tq8mep73oyi" path="res://character/Clockwork.gd" id="1_xyksl"]
+[ext_resource type="Texture2D" uid="uid://de6ubq2yfrqkf" path="res://art/scrapped/body.png" id="2_5hlae"]
+[ext_resource type="Texture2D" uid="uid://boxdh81mmg361" path="res://art/scrapped/limbs.png" id="3_s0v7q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmpu7"]
+radius = 14.5
+height = 112.0
+
+[sub_resource type="SkeletonModification2DPhysicalBones" id="SkeletonModification2DPhysicalBones_q44jx"]
+execution_mode = 1
+physical_bone_chain_length = 4
+fetch_bones = null
+joint_0_nodepath = NodePath("")
+joint_1_nodepath = NodePath("")
+joint_2_nodepath = NodePath("")
+joint_3_nodepath = NodePath("")
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_kwxe5"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DPhysicalBones_q44jx")
+
+[node name="old_marionette" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_xyksl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -9)
+shape = SubResource("CapsuleShape2D_bmpu7")
+
+[node name="Body" type="Node2D" parent="."]
+scale = Vector2(0.05, 0.05)
+
+[node name="Head" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-32, -592)
+texture = ExtResource("1_utkye")
+offset = Vector2(-56, -368)
+
+[node name="Body" type="Sprite2D" parent="Body"]
+light_mask = 0
+texture = ExtResource("2_5hlae")
+offset = Vector2(-32, -336)
+hframes = 2
+vframes = 2
+
+[node name="Lthigh" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-88, 24)
+texture = ExtResource("2_5hlae")
+offset = Vector2(8, 152)
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Rthigh" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(88, 24)
+texture = ExtResource("2_5hlae")
+offset = Vector2(-8, 168)
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Lcalf" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-72, 392)
+texture = ExtResource("2_5hlae")
+offset = Vector2(-24, 168)
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="Rcalf" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(88, 392)
+texture = ExtResource("2_5hlae")
+offset = Vector2(-24, 168)
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="Lfoot" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-72, 760)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(8, 80)
+hframes = 2
+vframes = 4
+frame = 6
+
+[node name="Rfoot" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(88, 760)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(-8, 88)
+hframes = 2
+vframes = 4
+frame = 7
+
+[node name="Larm" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-232, -464)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(0, 112)
+hframes = 2
+vframes = 4
+
+[node name="Lfore" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-232, -216)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(0, 88)
+hframes = 2
+vframes = 4
+frame = 2
+
+[node name="Lhand" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(-232, -32)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(0, 88)
+hframes = 2
+vframes = 4
+frame = 4
+
+[node name="Rarm" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(200, -472)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(0, 112)
+hframes = 2
+vframes = 4
+frame = 1
+
+[node name="Rfore" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(208, -224)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(0, 88)
+hframes = 2
+vframes = 4
+frame = 3
+
+[node name="Rhand" type="Sprite2D" parent="Body"]
+light_mask = 0
+position = Vector2(224, -40)
+texture = ExtResource("3_s0v7q")
+offset = Vector2(-8, 80)
+hframes = 2
+vframes = 4
+frame = 5
+
+[node name="Bones" type="Skeleton2D" parent="."]
+scale = Vector2(0.05, 0.05)
+modification_stack = SubResource("SkeletonModificationStack2D_kwxe5")
+
+[node name="Hip" type="Bone2D" parent="Bones"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Lthigh" type="Bone2D" parent="Bones/Hip"]
+position = Vector2(-88, 24)
+rest = Transform2D(1, 0, 0, 1, -88, 24)
+
+[node name="Lcalf" type="Bone2D" parent="Bones/Hip/Lthigh"]
+position = Vector2(16, 368)
+rest = Transform2D(1, 0, 0, 1, 16, 368)
+
+[node name="Lfoot" type="Bone2D" parent="Bones/Hip/Lthigh/Lcalf"]
+position = Vector2(0, 368)
+rest = Transform2D(1, 0, 0, 1, 0, 368)
+auto_calculate_length_and_angle = false
+length = 180.0
+bone_angle = 88.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Lthigh/Lcalf/Lfoot"]
+remote_path = NodePath("../../../../../../Body/Lfoot")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Lthigh/Lcalf"]
+remote_path = NodePath("../../../../../Body/Lcalf")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Lthigh"]
+remote_path = NodePath("../../../../Body/Lthigh")
+
+[node name="Rthigh" type="Bone2D" parent="Bones/Hip"]
+position = Vector2(88, 24)
+rest = Transform2D(1, 0, 0, 1, 88, 24)
+
+[node name="Rcalf" type="Bone2D" parent="Bones/Hip/Rthigh"]
+position = Vector2(0, 368)
+rest = Transform2D(1, 0, 0, 1, 0, 368)
+
+[node name="Rfoot" type="Bone2D" parent="Bones/Hip/Rthigh/Rcalf"]
+position = Vector2(0, 368)
+rest = Transform2D(1, 0, 0, 1, 0, 368)
+auto_calculate_length_and_angle = false
+length = 180.0
+bone_angle = 90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rthigh/Rcalf/Rfoot"]
+remote_path = NodePath("../../../../../../Body/Rfoot")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rthigh/Rcalf"]
+remote_path = NodePath("../../../../../Body/Rcalf")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rthigh"]
+remote_path = NodePath("../../../../Body/Rthigh")
+
+[node name="Larm" type="Bone2D" parent="Bones/Hip"]
+position = Vector2(-232, -464)
+rest = Transform2D(1, 0, 0, 1, -232, -464)
+
+[node name="Lfore" type="Bone2D" parent="Bones/Hip/Larm"]
+position = Vector2(0, 248)
+rest = Transform2D(1, 0, 0, 1, 0, 248)
+
+[node name="Lhand" type="Bone2D" parent="Bones/Hip/Larm/Lfore"]
+position = Vector2(0, 184)
+rest = Transform2D(1, 0, 0, 1, 0, 184)
+auto_calculate_length_and_angle = false
+length = 160.0
+bone_angle = 92.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Larm/Lfore/Lhand"]
+remote_path = NodePath("../../../../../../Body/Lhand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Larm/Lfore"]
+remote_path = NodePath("../../../../../Body/Lfore")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Larm"]
+remote_path = NodePath("../../../../Body/Larm")
+
+[node name="Rarm" type="Bone2D" parent="Bones/Hip"]
+position = Vector2(200, -472)
+rest = Transform2D(1, 0, 0, 1, 200, -472)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rarm"]
+remote_path = NodePath("../../../../Body/Rarm")
+
+[node name="Rfore" type="Bone2D" parent="Bones/Hip/Rarm"]
+position = Vector2(8, 248)
+rest = Transform2D(1, 0, 0, 1, 8, 248)
+
+[node name="Rhand" type="Bone2D" parent="Bones/Hip/Rarm/Rfore"]
+position = Vector2(16, 184)
+rest = Transform2D(1, 0, 0, 1, 16, 184)
+auto_calculate_length_and_angle = false
+length = 160.0
+bone_angle = 82.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rarm/Rfore/Rhand"]
+remote_path = NodePath("../../../../../../Body/Rhand")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Rarm/Rfore"]
+remote_path = NodePath("../../../../../Body/Rfore")
+
+[node name="Head" type="Bone2D" parent="Bones/Hip"]
+position = Vector2(-32, -592)
+rest = Transform2D(1, 0, 0, 1, -32, -592)
+auto_calculate_length_and_angle = false
+length = 700.0
+bone_angle = -90.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Hip/Head"]
+remote_path = NodePath("../../../../Body/Head")
+
+[node name="IK Targets" type="Node2D" parent="."]
+
+[node name="Head Target" type="Node2D" parent="IK Targets"]
+
+[node name="FootR Target" type="Node2D" parent="IK Targets"]
+
+[node name="FootL Target" type="Node2D" parent="IK Targets"]
+
+[node name="HandL Target" type="Node2D" parent="IK Targets"]
+
+[node name="HandR Target" type="Node2D" parent="IK Targets"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1.5, -23)
+limit_bottom = 128

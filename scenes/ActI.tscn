@@ -1,11 +1,12 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdg8ui6n1f152"]
 
-[ext_resource type="Texture2D" uid="uid://twix4fsisrpk" path="res://art/stage.jpeg" id="1_hncr4"]
 [ext_resource type="Texture2D" uid="uid://cywuhagbdnwy6" path="res://textures/spotlight.png" id="2_kre1a"]
 [ext_resource type="Texture2D" uid="uid://mb6r3ssw24vj" path="res://icon.svg" id="3_67bmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrfi"]
 size = Vector2(3629, 62)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_77ij5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h8eu"]
 size = Vector2(384, 48)
@@ -24,7 +25,7 @@ shape = SubResource("RectangleShape2D_fhrfi")
 [node name="Stage" type="Sprite2D" parent="."]
 position = Vector2(880, 392)
 scale = Vector2(4.7268, 2.63883)
-texture = ExtResource("1_hncr4")
+texture = SubResource("CompressedTexture2D_77ij5")
 
 [node name="Light1" type="PointLight2D" parent="." groups=["Lights"]]
 position = Vector2(-180, -70)

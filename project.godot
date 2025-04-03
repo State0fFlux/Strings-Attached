@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Strings Attached"
 run/main_scene="res://scenes/ShowManager.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.4", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
@@ -25,6 +25,10 @@ Utils="*res://globals/utils.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+Player=""
 
 [input]
 
@@ -56,10 +60,11 @@ Right={
 
 [layer_names]
 
-2d_physics/layer_1="Physics"
-2d_physics/layer_2="PlayerBounds"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Water"
 
 [rendering]
 
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0.552941, 0.184314, 0.12549, 1)
+environment/defaults/default_clear_color=Color(0.0901961, 0.145098, 0.282353, 1)
